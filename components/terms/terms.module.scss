@@ -1,0 +1,780 @@
+/* This contains the scss for the terms of use component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.termsHero {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 2%);
+    @include size($height: 500px);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    
+    .gradientOverlay {
+        //border: 1px solid green;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .image {
+        object-fit: cover;
+        object-position: center 65%;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .brief {
+        //border: 1px solid red;
+        z-index: 3;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+        @include size(70%, 70%);
+        top: 15%;
+
+        @include tabletPro {
+            top: 5%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include phonePro {
+            width: 80%;
+            top: 3%;
+        }
+
+        .brief1 {
+            @include text-layout($size: 60px, $l_height: 65px, $color: white, $weight: 600);
+            @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Aclonica";
+            @include size(100%, 50%);
+            //border: 1px solid red;
+
+            @include phonePro {
+                font-size: 30px;
+                line-height: 35px;
+                text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+
+        .brief2 {
+            @include text-layout($size: 15px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include flexBar($position: relative, $align: flex-start, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Poppins";
+            @include size(90%, 50%);
+            left: 0%;
+            top: 0%;
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include phonePro {
+                font-size: 13px;
+                line-height: 17px;
+                width: 100%;
+                //text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+    }
+}
+
+.term1 {
+    //border: 1px solid black;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 350px);
+    margin: 0px;
+    left: 0px;
+    top: 500px;
+
+    @include tabletPro {
+        height: 420px;
+    }
+
+
+    @include phonePro {
+        height: 420px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(90%, 85%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 10%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 80%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term2 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 220px);
+    margin: 0px;
+    left: 0px;
+    top: 850px;
+
+    @include tabletPro {
+        top: 910px;
+    }
+
+    @include phonePro {
+        top: 920px;
+        height: 240px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(90%, 85%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 10%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+
+           
+
+            @include tabletPro {
+                margin-bottom: 15px;
+            }
+
+            @include phonePro {
+                margin-bottom: 15px;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 80%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term3 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 350px);
+    margin: 0px;
+    left: 0px;
+    top: 1070px;
+
+    @include tabletPro {
+        top: 1140px;
+        height: 420px;
+    }
+
+    @include phonePro {
+        top: 1162px;
+        height: 420px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(90%, 85%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 5%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 90%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term4 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 300px);
+    margin: 0px;
+    left: 0px;
+    top: 1420px;
+
+    @include tabletPro {
+        top: 1560px;
+        height: 400px;
+    }
+
+    @include phonePro {
+        top: 1585px;
+        height: 400px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(90%, 85%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 10%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 85%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term5 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 380px);
+    margin: 0px;
+    left: 0px;
+    top: 1720px;
+
+    @include tabletPro {
+        top: 1960px;
+        height: 440px;
+    }
+
+    @include phonePro {
+        top: 1990px;
+        height: 430px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(90%, 85%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 5%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 90%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term6 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 750px);
+    margin: 0px;
+    left: 0px;
+    top: 2100px;
+
+    @include tabletPro {
+        top: 2400px;
+        height: 900px;
+    }
+
+    @include phonePro {
+        top: 2420px;
+        height: 850px;
+    }
+
+    @include phoneMini {
+        top: 2380px;
+        //height: 850px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 2%);
+        @include size(90%, 90%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 3%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 95%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term7 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 300px);
+    margin: 0px;
+    left: 0px;
+    top: 2800px;
+
+    @include tabletPro {
+        top: 3250px;
+        height: 330px;
+    }
+
+    @include phonePro {
+        top: 3170px;
+    }
+
+    @include phoneMini {
+        top: 3050px;
+        //height: 850px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(90%, 90%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 10%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 85%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term8 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 550px);
+    margin: 0px;
+    left: 0px;
+    top: 3150px;
+
+    @include tabletPro {
+        top: 3630px;
+        height: 700px;
+    }
+
+    @include phonePro {
+        top: 3450px;
+        height: 620px;
+    }
+
+    @include phoneMini {
+        top: 3400px;
+        //height: 850px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 3%);
+        @include size(90%, 90%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 5%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 90%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}
+
+.term9 {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 310px);
+    margin: 0px;
+    left: 0px;
+    top: 3700px;
+
+    @include tabletPro {
+        top: 4330px;
+        height: 370px;
+    }
+
+    @include phonePro {
+        
+        top: 4150px;
+        height: 400px;
+    }
+
+    @include phone {
+        //border: 1px solid red;
+        //top: 4000px;
+    }
+
+    @include phoneMini {
+        top: 4030px;
+        //height: 850px;
+    }
+
+    .container {
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 3%);
+        @include size(90%, 90%);
+        //border: 1px solid red;
+
+        .heading {
+            //border: 1px solid green;
+            @include size(100%, 5%);
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+            font-family: "Aclonica";
+            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+
+            @include phonePro {
+                font-size: 14px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+            
+            .number {
+                color: $primary-color;
+            }
+        }
+
+        .text {
+            //border: 1px solid red;
+            @include size(100%, 90%);
+            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 1%);
+            @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+            //left: 3.5%;
+            font-family: "Poppins";
+
+            @include tablet {
+                font-size: 12px;
+            }
+
+            @include tabletMini {
+                line-height: 18px;
+            }
+
+            @include phonePro {
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}

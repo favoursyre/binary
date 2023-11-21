@@ -1,0 +1,396 @@
+/* This contains the scss for the header component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.header {
+    //border: 1px solid red;
+    @include max-size;
+    @include size($height: 40px);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    @include flexBar($position: absolute, $align: center, $justify: space-between);
+    @include text-layout($size: 14px, $l_height: 27px, $weight: 600);
+    padding: 10px 0%;
+    z-index: 10;
+    background-color: transparent;
+
+    .menu {
+        display: none;
+
+        @include phonePro {
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            left: 5%;
+            width: 10%;
+            border: none;
+            background-color: transparent;
+            color: $primary-color;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+
+        .menuIcon {
+            font-size: 2rem;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+
+    .logo {
+        //border: 1px solid $primary-color;
+        //border: none;
+        background-color: transparent;
+        @include size(10%, 90%);
+        left: 5%;
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+
+        @include phonePro {
+            //height: 200px;
+        }
+
+        @include phonePro {
+            left: 0%;
+        }
+
+        @include phoneMini {
+            left: 3%;
+        }
+
+        .image {
+            //border: 1px solid red;
+            position: relative;
+            object-fit: contain;
+            @include size(100%, 100%);
+
+            @include phonePro {
+                //height: 120%;
+            }
+        }
+    }
+
+    nav {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+        @include size(50%, 80%);
+        //float: left;
+
+        @include tabletPro {
+            left: -4%;
+        }
+
+        @include tablet {
+            gap: 1%;
+        }
+
+        @include phonePro {
+            display: none;
+        }
+
+        .about {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: flex-end, $flex_d: column, $justify: flex-start, $gap: 3%);
+            @include size(20%, 200px);
+            top: 85.5px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+            @include tabletPro {
+                width: 40%;
+            }
+
+            .aboutBtn {
+                width: 110px;
+                color: white;
+                @include flexBar($position: relative, $align: center, $justify: flex-end, $gap: 1%);
+
+                .activeArrowIcon {
+                    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                    transform: rotate(-180deg);
+                }
+    
+                .inactiveArrowIcon {
+                    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                    transform: rotate(0deg);
+                }
+
+                &:hover {
+                    //transform: scale(1.03);
+                    color: $primary-color;
+                 }
+            }
+
+            .about_content {
+                border: 1px solid purple;
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+                @include size(100%, 75%);
+                display: none;
+                z-index: 10;
+                border-radius: 5px;
+                background-color: white;
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+
+                button {
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
+                    width: 100%;
+                    padding: 2% 0%;
+                    //border: 1px solid purple;
+
+
+                    &:hover {
+                        //border: 1px solid $primary-color;
+                        color: $primary-color;
+                     }
+                }
+            }
+
+            
+        }
+
+        .navBtn {
+           color: white;     
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            //width: 17%;
+            @include text-layout($size: 15px, $l_height: 27px, $weight: 600, $color: black);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
+
+            &:hover {
+                //transform: scale(1.03);
+                color: $primary-color;
+             }
+        }
+    }
+
+    .account {
+        //border: 1px solid $primary-color;
+        left: -5%;
+        top: 28px;
+        @include size(6%, 90px);
+        @include flexBar($position: relative, $align: flex-start, $flex_d: column, $justify: flex-start, $gap: 3%);
+        transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        //color: white;
+
+        @include tabletPro {
+            width: 10%;
+        }
+
+        @include phonePro {
+            @include size(20%, 100px);
+            top: 30px;
+        }
+        
+        @include phoneMini {
+            width: 25%;
+        }
+
+        .profile {
+            border: 2px solid $primary-color;
+            color: white;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+            @include size(100%, 38%);
+            border-radius: 5px;
+            background-color: transparent;
+
+            .activeArrowIcon {
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transform: rotate(-180deg);
+            }
+
+            .inactiveArrowIcon {
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transform: rotate(0deg);
+            }
+    
+            &:hover {
+                //transform: scale(1.05);
+                border: 2px solid white;
+            }
+        }
+
+        .profileContent {
+            //border: 1px solid $primary-color;
+            @include size(100%, 60%);
+            @include flexBar($position: relative, $align: flex-start, $flex_d: column, $justify: flex-start, $gap: 0%);
+            z-index: 10;
+            display: none;
+            border-radius: 5px;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 5px;
+
+            @include tabletPro {
+                padding: 10px;
+            }
+
+            button {
+                border: none;
+                @include size(100%, 50%);
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
+                @include text-layout($size: 15px, $l_height: 27px, $weight: 600);
+                font-family: "Poppins";
+                background-color: transparent;
+
+                &:hover {
+                    //border: 1px solid $primary-color;
+                    color: $primary-color;
+                 }
+            }
+        }
+
+        &:hover {
+            //transform: scale(1.03);
+            color: $primary-color;
+         }
+    }
+   
+}
+
+///This is for menu bar
+%menuBar {
+    display: none;
+
+    @include phonePro {
+        //border: 1px solid red;
+        @include max-size;
+        @include size(100%, 45%);
+        margin: 0px;
+        left: 0px;
+        top: 0px;
+        @include flexBar($position: absolute, $align: center, $justify: center, $flex_d: column, $gap: 0%);
+        background-color: white;
+        z-index: 4;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    @include phoneMini {
+        height: 45%;
+    }
+
+    .topBar {
+        //border: 1px solid black;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
+        @include size(100%, 20%);
+        border-bottom: 1px solid $primary-color; /* Set your border color and width */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+        //background-color: black;
+    }
+
+    .navBar {
+        //border: 1px solid black;
+        @include flexBar($position: relative, $align: center, $justify: space-between, $flex_d: column, $gap: 0%);
+        @include size(100%, 80%);
+        padding: 1% 0%;
+        //background-color: white;
+        
+        button {
+            @include size(100%, 20%);
+            background-color: white;
+            font-family: "Poppins";
+            @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 0%);
+            @include text-layout($size: 16px, $l_height: 27px, $weight: 600);
+            border: none;
+            padding: 0% 5%;
+            //border: 1px solid black;
+
+            // @include phone {
+            // }
+
+            .activeArrowIcon {
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transform: rotate(-180deg);
+            }
+
+            .inactiveArrowIcon {
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+
+.activeMenuBar {
+    @extend %menuBar;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(0%);
+}
+
+.inactiveMenuBar {
+    @extend %menuBar;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: translateY(-102%);
+}
+
+%aboutBar {
+    display: none;
+
+    @include phonePro {
+        //border: 1px solid red;
+        @include max-size;
+        @include size(100%, 28%);
+        margin: 0px;
+        left: 0px;
+        top: 115px;
+        @include flexBar($position: absolute, $align: center, $justify: space-between, $flex_d: column, $gap: 0%);
+        background-color: white;
+        z-index: 4;
+        border-top: 1px solid $text-color-3;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        padding: 2% 0%;
+    }
+
+    @include phone {
+        top: 105px;
+    }
+
+    @include phoneMini {
+        height: 30%;
+    }
+
+    button {
+        background-color: transparent;   
+        @include size(100%, 18%);
+        font-family: "Poppins";
+        @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 0%);
+        @include text-layout($size: 16px, $l_height: 27px, $weight: 600);
+        padding: 0% 5%;
+        top: 0%;
+        border: none;
+
+        span {
+            position: relative;
+            left: 5%;
+        }
+    }
+}
+
+.activeAboutBar {
+    @extend %aboutBar;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.inactiveAboutBar {
+    @extend %aboutBar;
+    transform: translateX(-102%);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.dashboardPage {
+    display: none;
+}
+
+.profilePage {
+    display: none;
+}
+
+.adminVerifyPage {
+    background-color: black;
+}

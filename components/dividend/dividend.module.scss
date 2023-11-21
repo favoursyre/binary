@@ -1,0 +1,343 @@
+/* This contains the scss for the dividend component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.dividendHero {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 2%);
+    @include size($height: 500px);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    
+    .gradientOverlay {
+        //border: 1px solid green;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .image {
+        object-fit: cover;
+        object-position: center 35%;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .brief {
+        //border: 1px solid red;
+        z-index: 3;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+        @include size(70%, 70%);
+        top: 15%;
+
+        @include tabletPro {
+            top: 5%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include phonePro {
+            width: 80%;
+            top: 3%;
+        }
+
+        .brief1 {
+            @include text-layout($size: 60px, $l_height: 65px, $color: white, $weight: 600);
+            @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Aclonica";
+            @include size(100%, 50%);
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include phonePro {
+                font-size: 30px;
+                line-height: 35px;
+                top: 5%;
+                text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+
+        .brief2 {
+            @include text-layout($size: 15px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include flexBar($position: relative, $align: flex-start, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Poppins";
+            @include size(90%, 50%);
+            left: 0%;
+            top: 0%;
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include phonePro {
+                font-size: 13px;
+                line-height: 17px;
+                width: 100%;
+                text-align: center;
+                top: -5%;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+                line-height: 15px;
+                top: -5%;
+            }
+        }
+    }
+}
+
+.container {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 1100px);
+    margin: 0px;
+    left: 0px;
+    top: 500px;
+
+    @include phonePro {
+        height: 1300px;
+    }
+
+    .dividendBrief {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: 2%);
+        @include size(70%, 30%);
+        font-family: "Poppins";
+        @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+
+        @include tabletPro {
+            width: 90%;
+        }
+
+        @include tablet {
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        @include phonePro {
+            @include size(90%, 40%);
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        @include phoneMini {
+            font-size: 11px;
+            line-height: 14px;
+        }
+
+        strong {
+            color: $primary-color;
+        }
+
+        ol {
+            //border: 1px solid red;
+            position: relative;
+
+            @include phonePro {
+                top: -2%;
+            }
+
+            li {
+                //border: 1px solid red;
+                position: relative;
+
+                @include phonePro {
+                    width: 105%;
+                    left: -5%;
+                }
+            }
+        }
+    }
+
+    .dividendTable {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 4%);
+        @include size(90%, 65%);
+        font-family: "Poppins";
+        //@include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 500);
+
+        @include tablet {
+            height: 60%;
+        }
+
+        @include phonePro {
+            height: 55%;
+        }
+
+        .selectYear {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 3%);
+            @include size(10%, 30px);
+
+            @include tabletPro {
+                width: 20%;
+            }
+
+            @include phonePro {
+                width: 50%;
+                gap: 15%;
+            }
+
+            .yearIcon {
+                font-size: 1.2rem;
+                color: $primary-color;
+                position: absolute;
+                left: 1.5%;
+                z-index: 1;
+
+                @include phonePro {
+                    //left: 5%;
+                }
+            }
+
+            select {
+                @include size(100%, 100%);
+                border: none;
+                position: relative;
+                border-bottom: 1px solid $primary-color;
+                padding: 0% 20%;
+                font-size: 13px;
+                color: $primary-color;
+                background-color: transparent;
+                @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+
+                option {
+                    color: black;
+                }
+
+                @include phonePro {
+                    //left: 5%;
+                    //border: 1px solid black;
+                    padding: 0% 0% 0% 20%;
+                }
+            }
+            
+            :focus {
+                outline-color: transparent;
+            }
+        }
+
+        .table {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 0%);
+            @include size(90%, 85%);
+
+            @include phonePro {
+                width: 100%;
+            }
+
+            .tableHead {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                @include size(100%, 45px);
+                background-color: $primary-color;
+                @include text-layout($size: 17px, $l_height: 20px, $color: white, $weight: 700);
+
+                @include phonePro {
+                    font-size: 11px;
+                    font-weight: 600;
+                    line-height: 17px;
+                }
+
+                @include phoneMini {
+                    font-size: 9px;
+                }
+
+                span {
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                    @include size(25%, 100%);
+                    text-align: center;
+                }
+
+                // .title0 {
+                //     border: 1px solid red;
+                //     @include phonePro {
+                //         //left: 3%;
+                //     }
+                // }
+            }
+
+            .tableBody {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                @include size(100%, 40px);
+                @include text-layout($size: 13px, $l_height: 20px, $color: black, $weight: 500);
+
+                @include phonePro {
+                    font-size: 11px;
+                }
+
+                @include phoneMini {
+                    font-size: 8px;
+                }
+
+                span {
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                    @include size(25%, 100%);
+                }
+            }
+
+            .body1, .body3, .body5, .body7, .body9, .body11 {
+                background-color: $secondary-color;
+            }
+
+            .tableBottom {
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 20%);
+                @include size(100%, 45px);
+                background-color: black;
+                @include text-layout($size: 13px, $l_height: 20px, $color: white, $weight: 500);
+
+                @include tablet {
+                    gap: 10%;
+                }
+
+                @include phonePro {
+                    font-size: 11px;
+                    line-height: 15px;
+
+                    gap: 5%;
+                }
+
+                @include phoneMini {
+                    font-size: 9px;
+                }
+
+                span {
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                    @include size(25%, 100%);
+                }
+
+                .span1 {
+                    width: 30%;
+
+                    @include tablet {
+                        width: 40%;
+                    }
+
+                    @include phonePro {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+}

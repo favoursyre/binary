@@ -1,0 +1,94 @@
+/* This contains the scss for the payable crypto component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 200px);
+    margin: 0px;
+    left: 0px;
+    top: 2200px;
+    padding: 2% 0%;
+    background-image: linear-gradient(to bottom, transparent, rgba(238, 80, 36, 0.2), rgba(238, 80, 36, 0.2), transparent);
+
+    @include tabletPro {
+        top: 2000px;
+    }
+
+    @include tablet {
+        top: 1900px;
+    }
+
+    @include phonePro {
+        top: 2900px;
+        height: 160px;
+    }
+
+    .heading {
+        //border: 1px solid red;
+        @include text-layout($size: 20px, $l_height: 30px, $color: black, $weight: 600);
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+        font-family: "Aclonica";
+        @include size(90%, 20%);
+        text-align: center;
+        top: 5%;
+
+        @include phonePro {
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        @include phoneMini {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+
+    .cryptos {
+        //border: 1px solid red;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        @include flexBar($position: relative, $align: space-between, $justify: center, $flex_d: row, $gap: 0%);
+        column-gap: 5%;
+        row-gap: 0%;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        padding: 1% 1%;
+        @include size(40%, 50%);
+        top: 10%;
+
+        @include tabletPro {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 60%;
+        }
+
+        @include phonePro {
+            @include size(80%, 40%);
+        }
+        
+        @include phoneMini {
+            @include size(80%, 30%);
+        }
+
+        .imageDiv {
+            //border: 1px solid red;
+            @include size(15%, 30%);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            overflow: hidden;
+            
+
+            .image {
+                //border: 1px solid red;
+                position: relative;
+                object-fit: contain;
+                @include size(100%, 100%);
+            }
+        }
+    }
+}

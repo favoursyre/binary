@@ -1,0 +1,262 @@
+/* This contains the scss for the reset password component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.resetHero {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 2%);
+    @include size($height: 500px);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+
+    @include phonePro {
+        height: 400px;
+    }
+    
+    .gradientOverlay {
+        //border: 1px solid green;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .image {
+        object-fit: cover;
+        object-position: center 45%;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .brief {
+        //border: 1px solid red;
+        z-index: 3;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+        @include size(70%, 70%);
+        top: 15%;
+
+        @include tabletPro {
+            top: 5%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include phonePro {
+            width: 80%;
+            top: 15%;
+        }
+
+        .brief1 {
+            @include text-layout($size: 60px, $l_height: 65px, $color: white, $weight: 600);
+            @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Aclonica";
+            @include size(100%, 50%);
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include phonePro {
+                font-size: 30px;
+                line-height: 35px;
+                //text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+
+        .brief2 {
+            @include text-layout($size: 15px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include flexBar($position: relative, $align: flex-start, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Poppins";
+            @include size(90%, 50%);
+            left: 0%;
+            top: 0%;
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include phonePro {
+                font-size: 13px;
+                line-height: 17px;
+                width: 100%;
+                top: -10%;
+                text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+                line-height: 15px;
+                top: -5%;
+            }
+        }
+    }
+}
+
+.container {
+    //border: 1px solid red;
+    @include flexBar($align: center, $flex_d: column, $justify: center, $gap: 3%);
+    top: 500px;
+    left: 0px;
+    padding: 1% 0%;
+    @include size(100%, 500px);
+    //background-image: linear-gradient(to bottom, #ffe0ec, white);
+    font-family: "Poppins";
+
+    @include tabletPro {
+        //border: 1px solid red;
+        // top: 7%;
+        // height: 75%;
+    }
+
+    @include phonePro {
+        //border: 1px solid red;
+        top: 400px;
+        padding: 0%;
+        //height: 500px;
+    }
+
+    .login {
+        border: 2px solid $text-color-4;
+        border-radius: 10px;
+        @include flexBar($align: center, $flex_d: column, $justify: center, $gap: 3%);
+        padding: 1%;
+        @include size(25%, 70%);
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+
+        @include tabletPro {
+            width: 40%;
+        }
+
+        @include phonePro {
+            width: 80%;
+        }
+
+        .icon {
+            color: $primary-color;
+            font-size: 5rem;
+            //border: 1px solid red;
+        }
+
+        form {
+            @include size(80%, 50%);
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+
+            .password, .resetPassword {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 3%);
+                @include size(100%, 30px);
+
+                .emailIcon, .lockIcon, .visibleIcon {
+                    //border: 1px solid red;
+                    position: absolute;
+                    left: 1.5%;
+                    z-index: 1;
+                    font-size: 1rem;
+                    color: $primary-color;
+                }
+
+                .visibleIcon {
+                    left: 92%;
+                }
+
+                input {
+                    @include size(100%, 100%);
+                    border: none;
+                    position: relative;
+                    border-bottom: 1px solid $primary-color;
+                    padding: 0% 10%;
+                    font-size: 13px;
+                    
+
+                    @include phoneMini {
+                        padding: 0% 14%;
+                    }
+                }
+
+                ::placeholder {
+                    position: relative;
+                    font-size: 13px;
+                    overflow: auto;
+                    font-family: "Poppins";
+                  }
+                
+                :focus {
+                    outline-color: transparent;
+                }
+            }
+
+            .remember {
+                //border: 1px solid red;
+                width: 100%;
+                font-size: 10px;
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+
+                input {
+                    accent-color: $primary-color;
+                  }
+            }
+
+            button {
+                @include size(100%, 30px);
+                @include text-layout($size: 15px, $l_height: 25px, $color: $primary-color, $weight: 600);
+                border: 1px solid $primary-color;
+                background-color: transparent;
+                border-radius: 5px;
+
+                &:hover {
+                    color: white;
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .brief {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 5px);
+            font-size: 12px;
+
+            button {
+                color: $primary-color;
+                border: none;
+                background-color: transparent;
+                font-size: 12px;
+            }
+
+            .brief1 {
+                position: relative;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.inActiveForgotModal {
+    display: none;
+}
+
+.activeForgotModal {
+    border: 1px solid red;
+    @include size ($width: 100%, $height: 100%);
+    @include flexBar ($position: fixed, $align: center, $justify: center, $gap: 1%, $flex_d: row, $flex: none);
+    z-index: 100;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.6);
+}

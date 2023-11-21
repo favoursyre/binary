@@ -1,0 +1,14 @@
+/* This contains the scss for the loading component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }

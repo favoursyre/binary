@@ -1,0 +1,74 @@
+/* This contains the scss for the verification component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 500px);
+    margin: 0px;
+    left: 0px;
+    top: 100px;
+    font-family: "Poppins";
+
+    .profile {
+        border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 2%);
+        @include size(100%, 90%);
+        
+
+        span {
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+            @include size(70%, 10%);
+            border: 1px solid red;
+
+            @include phonePro {
+                width: 90%;
+            }
+        }
+
+        .imageDiv {
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            @include size(50%, 70%);
+            z-index: -100;
+            //top: 12%;
+            //border-radius: 10px;
+            border: 1px solid red;
+            background: linear-gradient(to right, transparent, transparent, rgba(255, 255, 255, 1));
+            overflow: hidden;
+
+            @include tabletPro {
+                height: 65%;
+            }
+
+            @include phonePro {
+                @include size(90%, 70%);
+            }
+
+            .image {
+                //border: 1px solid green;
+                //object-position: center 10%;
+                object-fit: contain;
+                position: absolute;
+                @include size(100%, 100%);
+            }
+
+            
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 2%);
+        @include size(50%, 40px);
+        @include text-layout($size: 15px, $l_height: 25px, $color: $primary-color, $weight: 600);
+
+        &:hover, &:active {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,521 @@
+/* This contains the scss for the account bar component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+
+%bar {
+    //border-right: 1px solid red;
+    @include flexBar($position: fixed, $align: center, $justify: flex-start, $gap: 0%);
+    @include size(20%, 100%);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    max-height: 100%;
+    padding: 0px;
+    font-family: "Poppins";
+    z-index: 10;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2), 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 1px 8px rgba(0, 0, 0, 0.2);
+
+    @include tabletPro {
+        position: absolute;
+        width: 40%;
+        
+    }
+
+    @include tablet {
+        width: 50%;
+    }
+
+    @include phonePro {
+        position: absolute;
+        width: 70%;
+        z-index: 10;
+    }
+
+    @include phoneMini {
+        width: 80%;
+    }
+
+    .main {
+        @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 5%);
+        @include size(100%, 100%);
+        //border: 1px solid red;
+
+        @include tabletPro {
+            width: 90%;
+        }
+
+        @include phonePro {
+            width: 90%;
+        }
+
+        .logo {
+            //border: 1px solid $primary-color;
+            //border: none;
+            background-color: transparent;
+            @include size(100%, 4%);
+            top: 4%;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+    
+            @include tabletPro {
+                height: 10%;
+            }
+    
+            @include phonePro {
+                left: 0%;
+            }
+    
+            @include phoneMini {
+                left: 3%;
+            }
+    
+            .image {
+                //border: 1px solid red;
+                position: relative;
+                object-fit: contain;
+                @include size(10%, 100%);
+    
+                @include tabletPro {
+                   width: 15%;
+                }
+            }
+    
+            span {
+                //border: 1px solid $primary-color;
+                @include text-layout($size: 20px, $l_height: 20px, $color: $primary-color, $weight: 600);
+
+                @include tabletPro {
+                    font-size: 30px;
+                 }
+            }
+        }
+    
+        .profile {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+            @include size(80%, 10%);
+            top: 7%;
+
+            @include tabletPro {
+                @include size(90%, 10%);
+            }
+    
+            .imageDiv {
+                border: 2px solid $text-color-3;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                @include size(23%, 75%);
+                //box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2), 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 1px 8px rgba(0, 0, 0, 0.2);
+                //@include size(30%, 25%);
+                overflow: hidden;
+                border-radius: 100%;
+                margin-bottom: 15px;
+                top: 10%;
+
+                @include tabletPro {
+                    @include size(30%, 75%);
+                }
+
+                @include tabletMini {
+                    height: 90%;
+                }
+
+                @include phonePro {
+                    @include size(30%, 75%);
+                    //top: 4%
+                }
+    
+                @include phoneMini {
+                    height: 70%;
+                }
+    
+                .image {
+                    object-fit: cover;
+                    //object-position: center 50%;
+                    position: absolute;
+                    @include size(100%, 100%);
+                }
+
+                .icon {
+                    position: relative;
+                    @include size(100%, 100%);
+                    color: $text-color-3;
+                }
+            }
+    
+            .brief {
+                //border: 1px solid red;
+                @include size(70%, 80%);
+                @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 2%);
+
+                @include tabletPro {
+                    width: 60%;
+                }
+
+                @include phonePro {
+                    @include size(60%, 60%);
+                    gap: 0%;
+                }
+    
+                .brief1 {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
+                    @include size(100%, 50%);
+                    @include text-layout($size: 14px, $l_height: 17px, $color: black, $weight: 600);
+
+                    @include tabletPro {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+
+                    @include phonePro {
+                        font-size: 11px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 10px;
+                        line-height: 14px;
+                    }
+                }
+    
+                .brief2 {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
+                    @include size(100%, 30%);
+                    @include text-layout($size: 10px, $l_height: 20px, $color: black, $weight: 500);
+
+                    @include tabletPro {
+                        font-size: 12px;
+                    }
+
+                    @include phonePro {
+                        font-size: 8px;
+                        align-items: flex-start;
+                        //line-height: 30px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 7px;
+                    }
+                }
+            }
+        }
+    
+        .nav {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+            @include size(80%, 20%);
+            top: 10%;
+
+            @include tabletPro {
+                gap: 5%;
+               }
+
+            @include phonePro {
+            gap: 5%;
+            }
+    
+            button {
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 10%);
+                @include size(90%, 40px);
+                background-color: transparent;
+               //border: 1px solid $primary-color;
+               border: none;
+
+               @include tabletPro {
+                height: 50px;
+                gap: 5%;
+               }
+    
+                .icon {
+                    color: black;
+
+                    @include tabletPro {
+                        font-size: 2rem;
+                    }
+                }
+    
+                span {
+                    color: $primary-color;
+                    @include text-layout($size: 14px, $l_height: 20px, $color: black, $weight: 600);
+
+                    @include tabletPro {
+                        font-size: 17px;
+                    }
+                }
+    
+                &:hover {
+                    .icon {
+                        color: $primary-color;
+                    }
+        
+                    span {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    
+        .logout {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+            @include size(80%, 20%);
+            top: 30%;
+
+            @include tabletPro {
+                top: 25%;
+            }
+
+            @include phonePro {
+                top: 25%;
+            }
+    
+            button {
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 10%);
+                @include size(90%, 40px);
+                background-color: transparent;
+                //border: 1px solid $primary-color;
+                border: none;
+    
+                .icon {
+                    color: black;
+                    position: relative;
+
+                    @include tabletPro {
+                        font-size: 2rem;
+                    }
+                }
+    
+                span {
+                    color: $primary-color;
+                    @include text-layout($size: 14px, $l_height: 20px, $color: black, $weight: 600);
+
+                    @include tabletPro {
+                        font-size: 17px;
+                    }
+                }
+    
+                &:hover {
+                    .icon {
+                        color: $primary-color;
+                    }
+        
+                    span {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+        @include size(10%, 100%);
+        //background-color: $secondary-color;
+        background-color: transparent;
+        border: 1px solid white;
+
+        .drag {
+            transform: rotate(90deg);
+            font-size: 3rem;
+        }
+
+        @include desktop {
+            display: none;
+        }
+
+        @include tabletPro {
+            
+        }
+
+        &:hover, &:active {
+            .drag {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.activeBar {
+    @extend %bar;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    @include tabletPro {
+        transform: translateX(0%);
+    }
+    
+    @include phonePro {
+        transform: translateX(0%);
+    }
+}
+
+.inActiveBar {
+    @extend %bar;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    @include tabletPro {
+        transform: translateX(-90%);
+    }
+
+    @include phonePro {
+        transform: translateX(-90%);
+    }
+}
+
+.inActiveModal {
+    display: none;
+}
+
+.activeModal {
+    //border: 1px solid red;
+    @include size ($width: 100%, $height: 100%);
+    @include flexBar ($align: center, $justify: center, $gap: 1%, $flex_d: row, $flex: none);
+    z-index: 100;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .container {
+        border: 2px solid $text-color-4;
+        border-radius: 10px;
+        background-color: white;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 3%);
+        padding: 1% 5%;
+        @include size(40%, 40%);
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+        top: 0%;
+        left: 5%;
+
+        @include tabletPro {
+            height: 20%;
+        }
+
+        @include tabletMini {
+            width: 50%;
+        }
+
+        @include phonePro {
+            @include size(80%, 30%); 
+            left: 0%;
+        }
+
+        .closeIcon {
+            //border: 1px solid red;
+            position: absolute;
+            left: 90%;
+            top: 12%;
+            z-index: 200;
+
+            @include phonePro {
+                top: 10%;
+                left: 88%;
+            }
+
+            @include phoneMini {
+                top: 8%;
+                left: 85%;
+            }
+
+            &:hover, &:active {
+                color: $primary-color;
+            }
+        }
+
+        .logoutContent {
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+            //border: 1px solid red;
+            @include size(100%, 85%);
+            top: 3%;
+
+            @include tabletPro {
+                gap: 15%;
+            }
+
+            @include phoneMini {
+                gap: 15%;
+            }
+
+            span {
+                //border: 1px solid red;
+                font-family: "Poppins";
+                @include text-layout($size: 17px, $l_height: 20px, $color: black, $weight: 500);
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
+                @include size(90%, 10%);
+
+                @include phonePro {
+                    font-size: 15px;
+                }
+
+                @include phoneMini {
+                    font-size: 12px;
+                }
+            }
+
+            .buttons {
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 10%);
+                @include size(90%, 20%);
+                //border: 1px solid red;
+
+                button {
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                    @include size(25%, 40px);
+                    @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+                    background-color: transparent;
+                    border: 1px solid $primary-color;
+
+                    @include phonePro {
+                        width: 35%;
+                    }
+
+                    @include phoneMini {
+                        font-size: 12px;
+                    }
+
+                    &:hover, &:active {
+                        color: white;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.dashboardPage {
+    //display: none;
+    .main {
+        .nav {
+            //border: 1px solid black;
+            .dashboard {
+                .icon {
+                    color: $primary-color;
+                }
+
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+    } 
+}
+
+.profilePage {
+    //display: none;
+    .main {
+        .nav {
+            //border: 1px solid black;
+            .profile {
+                .icon {
+                    color: $primary-color;
+                }
+
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

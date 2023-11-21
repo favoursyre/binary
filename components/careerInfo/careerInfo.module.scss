@@ -1,0 +1,99 @@
+/* This contains the scss for the career component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.careerInfoHero {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 2%);
+    @include size($height: 500px);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    
+    .gradientOverlay {
+        //border: 1px solid green;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .brief {
+        //border: 1px solid red;
+        z-index: 3;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+        @include size(70%, 70%);
+        top: 15%;
+
+        @include tabletPro {
+            top: 5%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include phonePro {
+            width: 80%;
+            top: 3%;
+        }
+
+        .brief1 {
+            @include text-layout($size: 60px, $l_height: 65px, $color: white, $weight: 600);
+            @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Aclonica";
+            @include size(100%, 50%);
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include phonePro {
+                font-size: 30px;
+                line-height: 35px;
+                top: 5%;
+                text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+
+        .brief2 {
+            @include text-layout($size: 15px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include flexBar($position: relative, $align: flex-start, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Poppins";
+            @include size(90%, 50%);
+            left: 0%;
+            top: 0%;
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include phonePro {
+                font-size: 13px;
+                line-height: 17px;
+                width: 100%;
+                text-align: center;
+                top: -5%;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+                line-height: 15px;
+                top: -5%;
+            }
+        }
+    }
+}

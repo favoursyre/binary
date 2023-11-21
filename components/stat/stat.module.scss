@@ -1,0 +1,149 @@
+/* This contains the scss for the stat component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 0%);
+    @include size($height: 100px);
+    margin: 0px;
+    left: 0px;
+    top: 800px;
+    padding: 2% 0%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
+
+    @include tabletPro {
+        top: 750px;
+    }
+
+    @include phonePro {
+        top: 550px;
+        height: 70px;
+    }
+
+    .investment, .clients, .experience {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+        @include size(25%, 85%);
+        padding: 0% 2%;
+        border-left: 1px solid $primary-color;
+
+        @include tabletPro {
+            width: 28%;
+        }
+
+        @include phonePro {
+            @include size(28%, 75%);
+            gap: 10%;
+        }
+
+        @include phoneMini {
+            height: 70%;
+        }
+
+        .icon { 
+            //border: 1px solid green;
+            @include flexBar($position: relative, $align: center, $justify: center, $flex_d: row, $gap: 1%);
+            @include size(30%, 100%);
+            color: $primary-color;
+
+            @include phonePro {
+                width: 20%;
+            }
+
+            .iconTag {
+                font-size: 5rem;
+
+                @include tabletPro {
+                    font-size: 4rem;
+                }
+
+                @include phonePro {
+                    font-size: 2rem;
+                }
+
+                @include phoneMini {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .brief {
+            //border: 1px solid green;
+            @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: 0%);
+            @include size(70%, 100%);
+            font-family: "Poppins";
+
+            .brief1 {
+                //border: 1px solid black; 
+                @include size(100%, 70%);
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+                @include text-layout($size: 35px, $l_height: 25px, $color: $primary-color, $weight: 600);
+
+                @include tabletPro {
+                    font-size: 30px;
+                }
+
+                @include phonePro {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+
+                @include phone {
+                    font-size: 15px;
+                }
+
+                @include phoneMini {
+                    font-size: 12px;
+                }
+            }
+
+            .brief2 {
+                //border: 1px solid green; 
+                @include size(100%, 30%);
+                @include flexBar($position: relative, $align: flex-start, $justify: flex-start,  $gap: 1%);
+                @include text-layout($size: 15px, $l_height: 25px, $color:black, $weight: 500);
+                top: -5%;
+
+                @include tabletPro {
+                    font-size: 12px;
+                    top: -10%;
+                }
+
+                @include phonePro {
+                    font-size: 8px;
+                    line-height: 10px;
+                    top: -10%;
+                }
+
+                @include phone {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+    .investment {
+        @include tabletPro {
+            border-left: none;
+        }
+
+        @include phonePro {
+            border-left: none;
+        }
+    }
+
+    .experience {
+        border-right: 1px solid $primary-color;
+
+        @include tabletPro {
+            border-right: none;
+        }
+
+        @include phonePro {
+            border-right: none;
+        }
+    }
+}

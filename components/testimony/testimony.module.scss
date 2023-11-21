@@ -1,0 +1,272 @@
+/* This contains the scss for the testimony component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 1%);
+    @include size($height: 650px);
+    margin: 0px;
+    left: 0px;
+    top: 3301px;
+    padding: 2% 0%;
+    background-image: linear-gradient(to bottom, transparent, transparent, $primary-color);
+
+    @include tabletPro {
+        top: 3100px;
+        height: 600px;
+    }
+
+    @include tablet {
+        top: 3000px;
+    }
+
+    @include phonePro {
+        top: 4300px;
+        height: 500px;
+    }
+
+    @include phoneMini {
+        height: 400px;
+    }
+
+    .brief {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 5%);
+        @include size(90%, 15%);
+        top: -4%;
+
+        .brief1 {
+            font-family: "Poppins";
+            @include text-layout($size: 15px, $l_height: 25px, $color:black, $weight: 500);
+            @include size(90%, 30%);
+            position: relative;
+            //border: 1px solid red;
+            text-align: center;
+
+            @include phonePro {
+                width: 100%;
+                font-size: 11px;
+                line-height: 15px;
+                top: 5%;
+            }
+
+            @include phoneMini {
+                font-size: 8px;
+                line-height: 12px;
+            }
+        }
+
+        .brief2 {
+            font-family: "Aclonica";
+            @include text-layout($size: 30px, $l_height: 40px, $color: $primary-color, $weight: 600);
+            @include size(90%, 50%);
+            //border: 1px solid red;
+            text-align: center;
+
+            @include phonePro {
+                font-size: 20px;
+                line-height: 25px;
+                top: -5%;
+                width: 100%;
+            }
+
+            @include phoneMini {
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .swipeContainer {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+        @include size(90%, 70%);
+
+        .slider {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 3%);
+            @include size(30%, 95%);
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            top: 2%;
+            font-family: "Poppins";
+
+            @include tabletPro {
+                width: 40%;
+                gap: 5%;
+            }
+
+            @include tablet {
+                width: 50%;
+            }
+
+            @include phonePro {
+                width: 70%;
+            }
+
+            @include phone {
+                width: 80%;
+            }
+
+            .imageDiv {
+                border: 2px solid $primary-color;
+                @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+                @include size(30%, 25%);
+                overflow: hidden;
+                border-radius: 100%;
+
+                .image {
+                    object-fit: cover;
+                    //object-position: center 65%;
+                    position: absolute;
+                    @include size(100%, 100%);
+                }
+
+                @include phonePro {
+                    @include size(35%, 27%);
+                }
+            }
+
+            .bio {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 3%);
+                @include size(80%, 10%); 
+
+                .bio1 {
+                    @include size(100%, 60%); 
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center,  $justify: center, $gap: 3%);
+                    @include text-layout($size: 18px, $l_height: 18px, $color: $primary-color, $weight: 600);
+
+                    @include phonePro {
+                        font-size: 14px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 12px;
+                    }
+                }
+
+                .bio2 {
+                    @include size(100%, 40%); 
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center,  $justify: center, $gap: 3%);
+                    @include text-layout($size: 13px, $l_height: 18px, $color: $text-color-3, $weight: 500);
+
+                    @include phonePro {
+                        font-size: 10px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            .testimony {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 3%);
+                @include size(80%, 30%);
+                @include text-layout($size: 13px, $l_height: 16px, $color: black, $weight: 500);
+                text-align: center;
+
+                @include tabletMini {
+                    font-size: 11px;
+                    line-height: 15px;
+                }
+
+                @include phonePro {
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+
+                @include phoneMini {
+                    font-size: 8px;
+                    line-height: 9px;
+                }
+            }
+
+            .stars {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0.5%);
+                @include size(80%, 5%);
+                color: $primary-color;
+
+                .starIcon {
+                    @include phonePro {
+                        font-size: 1rem;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .controller {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 5%);
+        @include size(90%, 6%);
+        color: $primary-color;
+
+        @include phonePro {
+            gap: 1%;
+            //justify-content: space-between;
+        }
+
+        .prev, .next {
+            color: white;
+            border: none;
+            border-radius: 5px;
+            //border: 1px solid red;
+            @include size(5%, 100%);
+            @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            z-index: 5;
+            
+
+            @include phonePro {
+                width: 10%;
+                display: none;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        .pagination {
+            color: $text-color-3;
+            position: relative;
+            top: 22%;
+            align-items: center;
+            //@include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            //border: 1px solid red;
+            @include size(30%, 100%);
+
+            @include tablet {
+                width: 40%;
+            }
+
+            @include phonePro {
+                gap: 0%;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                top: 15%;
+            }
+
+            @include phone {
+                //width: 80%;
+            }
+
+            @include phoneMini {
+                top: -5%;
+                line-height: 12px;
+            }
+        }
+    }
+}

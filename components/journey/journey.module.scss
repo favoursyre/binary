@@ -1,0 +1,201 @@
+/* This contains the scss for the register component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 1100px);
+    margin: 0px;
+    left: 0px;
+    top: 1000px;
+    padding: 2% 0%;
+
+    @include tabletPro {
+        height: 1000px;
+        top: 900px;
+    }
+
+    @include tablet {
+        top: 885px;
+        height: 900px;
+    }
+
+    @include phonePro {
+        top: 650px;
+        height: 2200px;
+    }
+
+    .heading {
+        //border: 1px solid red;
+        @include text-layout($size: 30px, $l_height: 40px, $color: $primary-color, $weight: 600);
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+        font-family: "Aclonica";
+        @include size(90%, 10%);
+        text-align: center;
+        top: 1%;
+
+        @include phonePro {
+            font-size: 20px;
+            line-height: 30px;
+            height: 2%;
+        }
+    }
+
+    .section1, .section2 {
+        //border: 1px solid red;
+        //@include text-layout($size: 35px, $l_height: 40px, $color: $primary-color, $weight: 600);
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 2%);
+        @include size(90%, 45%);
+        top: 0%;
+        font-family: "Poppins";
+
+        @include tablet {
+            width: 95%;
+        }
+
+        @include phonePro {
+            @include size(80%, 57%);
+            flex-direction: column;
+            top: 1%;
+        }
+
+        .step1, .step2, .step3, .step4, .step5 {
+            padding: 0% 2%;
+            //border: 1px solid red;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+            border-radius: 10px;
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 3%);
+            @include size(27%, 100%);
+
+            @include tabletPro {
+                width: 28%;
+            }
+
+            @include phonePro {
+                @include size(100%, 32%);
+                gap: 2%;
+            }
+
+            .step {
+                border: 1px solid $primary-color;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 3%);
+                border-radius: 100px;
+                @include size(35%, 8%);
+                left: -32%;
+                color: $primary-color;
+                @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 500);
+
+                @include tabletPro {
+                    font-size: 13px;
+                }
+
+                @include phonePro {
+                    left: -28%;
+                }
+
+                @include phoneMini {
+                    height: 6%;
+                    font-size: 12px;
+                }
+            }
+
+            .title {
+                @include text-layout($size: 20px, $l_height: 20px, $color: $primary-color, $weight: 600);
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                @include size(100%, 5%);
+
+                @include tabletPro {
+                    font-size: 18px;
+                }
+
+                @include tablet {
+                    font-size: 16px;
+                }
+
+                @include phonePro {
+                    width: 90%;
+                    font-size: 15px;
+                }
+            }
+
+            .card {
+                //border: 1px solid red; 
+                @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 4%);
+                @include size(100%, 70%);
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+                @include phonePro {
+                    width: 90%;
+                }
+
+                .imageDiv {
+                    @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
+                    @include size(85%, 40%);
+                    border-radius: 10px;
+                    //border: 1px solid red;
+                    overflow: hidden;
+
+                    .image {
+                        object-fit: cover;
+                        object-position: center 50%;
+                        position: absolute;
+                        @include size(100%, 100%);
+                    }
+                }
+
+                .brief {
+                    @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 0%);
+                    @include size(85%, 45%);
+                    @include text-layout($size: 13px, $l_height: 18px, $color: black, $weight: 500);
+                    //border: 1px solid red;
+
+                    @include tabletPro {
+                        font-size: 11px;
+                        line-height: 15px;
+                    }
+
+                    @include tablet {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+
+                    @include phonePro {
+                        font-size: 11px;
+                        line-height: 15px;
+                        text-align: center;
+                    }
+
+                    @include phoneMini {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section2 {
+        @include phonePro {
+            height: 35%;
+        }
+
+        .step4, .step5 {
+
+            @include phonePro {
+                @include size(100%, 50%);
+            }
+            
+        }
+    }
+
+    .step3 {
+        .image {
+            object-fit: contain;
+        }
+    }
+}

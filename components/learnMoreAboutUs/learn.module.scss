@@ -1,0 +1,173 @@
+/* This contains the scss for the learn more component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.learnMore {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 10%);
+    @include size($height: 200px);
+    margin: 0px;
+    left: 0px;
+    top: 2550px;
+    background-image: linear-gradient(to bottom, transparent, transparent, $primary-color);
+
+    @include tabletPro {
+        top: 2450px;
+    }
+
+    @include phonePro {
+        gap: 5%;
+        height: 190px;
+        top: 3100px;
+    }
+
+    @include phone {
+        top: 3150px;
+    }
+
+    .heading {
+        //border: 1px solid red;
+        position: relative;
+        font-family: "Aclonica";
+        @include text-layout($size: 20px, $l_height: 30px, $color: black, $weight: 600);
+        @include size(60%, 15%);
+        text-align: center;
+
+        @include phonePro {
+            width: 90%;
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        @include phoneMini {
+            font-size: 11px;
+            line-height: 15px;
+        }
+    }
+
+    .links {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
+        @include size(80%, 15%);
+
+        @include tabletPro {
+            width: 85%;
+            gap: 2%;
+        }
+
+        @include tablet {
+            width: 95%;
+        }
+        @include phonePro {
+            @include size(95%, 13%);
+            gap: 5%;
+        }
+
+        button {
+            @include size(15%, 100%);
+            font-family: "Poppins";
+            @include text-layout($size: 13px, $l_height: 20px, $color: black, $weight: 600);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+            background-color: transparent;
+            border: none;
+
+            @include tabletPro {
+                width: 17%;
+            }
+
+            @include tablet {
+                font-size: 11px;
+                width: 18%;
+            }
+
+            @include phonePro {
+                font-size: 9px;
+                line-height: 11px;
+                width: 19%;
+                gap: 0%;
+                //border: 1px solid red;
+            }
+
+            @include phoneMini {
+                font-size: 7px;
+                line-height: 8px;
+                width: 19%;
+                
+            }
+
+            .icon {
+                color: $text-color-3;
+
+                @include phonePro {
+                    font-size: 1rem;
+                }
+
+                @include phoneMini {
+                    font-size: 0.8rem;
+                }
+            }
+
+            &:hover {
+                .icon {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.ourHistoryPage {
+    top: 1880px;
+
+    @include tabletPro {
+        top: 1840px;
+    }
+
+    @include tabletMini {
+        top: 2150px;
+    }
+
+    @include phonePro {
+        top: 1970px;
+    }
+
+    @include phoneMini {
+        top: 1800px;
+    }
+    
+}
+
+.ourPrinciplePage {
+    //border: 1px solid red;
+    top: 1700px;
+
+    @include phonePro {
+        top: 1650px;
+    }
+}
+
+.ourFoundationPage {
+    top: 1650px;
+
+    @include tabletPro {
+        top: 1650px; 
+    }
+
+    @include phonePro {
+        top: 1800px;
+    }
+}
+
+.ourLeadershipPage {
+    top: 1500px;
+
+    @include phonePro {
+        top: 2050px;
+    }
+
+    @include phoneMini {
+        top: 1800px;
+    }
+}

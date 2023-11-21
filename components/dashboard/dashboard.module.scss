@@ -1,0 +1,1109 @@
+/* This contains the scss for the dashboard component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid green;
+    @include flexBar($align: flex-end, $justify: flex-end, $flex_d: column, $gap: 2%);
+    @include size(80%, 100%);
+    margin: 0px;
+    left: 20%;
+    top: 0px;
+    background-color: $text-color-3;
+    padding: 0px;
+    font-family: "Poppins";
+
+    @include tabletPro {
+        width: 95%;
+        left: 5%;
+    }
+
+    @include phonePro {
+        width: 90%;
+        left: 8%;
+    }
+
+    .container {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 5%);
+        @include size(100%, 100%);
+        background-color: white;
+        left: 0px;
+        margin: 0px;
+        //background-color: black;
+        //border-radius: 20px 20px 0px 0px;
+
+        @include phonePro {
+            gap: 3%;
+        }
+
+        .greeting {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
+            @include text-layout($size: 30px, $l_height: 20px, $color: $primary-color, $weight: 600);
+            font-family: "Aclonica";
+            @include size(80%, 5%);
+            //top: -3%;
+
+            @include tabletPro {
+                width: 90%;
+            }
+
+            @include phonePro {
+                @include size(90%, 3%);
+                font-size: 20px;
+                top: -2%;
+            }
+
+            @include phoneMini {
+                font-size: 17px;
+            }
+        }
+
+        .portfolio {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+            @include size(80%, 210px);
+            //top: -2%;
+
+            @include tabletPro {
+                @include size(90%, 250px)
+            }
+
+            @include phonePro {
+                flex-direction: column;
+                @include size(90%, 40%);
+                top: -2%;
+            }
+
+            .investment, .dividend {
+                border: 2px solid $text-color-4;
+                @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 15%);
+                @include size(45%, 95%);
+                border-radius: 10px;
+                //background-color: white;
+
+                @include phonePro {
+                    @include size(100%, 45%);
+                }
+
+                .iconBrief {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: center, $gap: 7%);
+                    @include size(80%, 40%);
+                    top: -5%;
+
+                    @include phonePro {
+                        left: -4%;
+                    }
+
+                    @include phoneMini {
+                        width: 90%;
+                    }
+
+                    .icon {
+                        //border: 1px solid red;
+                        @include size(20%, 100%);
+                        color: $primary-color;
+                        position: relative;
+
+                        @include phonePro {
+                            font-size: 2rem;
+                            height: 70%;
+                        }
+                    }
+
+                    .brief {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: 15%);
+                        @include size(70%, 100%);
+
+                        @include phonePro {
+                            gap: 5%;
+                        }
+    
+                        .span1 {
+                            position: relative;
+                            @include text-layout($size: 13px, $l_height: 20px, $color: $text-color-3, $weight: 500);
+
+                            @include phonePro {
+                                font-size: 10px;
+                            }
+
+                            @include phoneMini {
+                                font-size: 10px;
+                            }
+                        }
+    
+                        .span2 {
+                            position: relative;
+                            @include text-layout($size: 25px, $l_height: 20px, $color: black, $weight: 800);
+
+                            @include phonePro {
+                                font-size: 18px;
+                            }
+
+                            @include phoneMini {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+
+                .buttons {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+                    @include size(80%, 35px);
+
+                    @include phoneMini {
+                        width: 90%;
+                    }
+
+                    button {
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                        @include size(45%, 100%);
+                        background-color: transparent;
+                        border: 1px solid $primary-color;
+                        border-radius: 0px;
+
+                        .icon {
+                            color: $primary-color;
+
+                            @include tabletMini {
+                                font-size: 1rem;
+                            }
+
+                            @include phonePro {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        span {
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+
+                            @include tabletMini {
+                                font-size: 12px;
+                            }
+
+                            @include phonePro {
+                                font-size: 12px;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $primary-color;
+
+                            .icon {
+                                color: white;
+                            }
+    
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .transactionHistory {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 2%);
+            @include size(80%, 45%);
+            //top: 2%;
+
+            @include tabletPro {
+                @include size(90%, 50%)
+            }
+
+            @include phonePro {
+                @include size(90%, 40%);
+                top: -2%;
+            }
+
+            .heading {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+                @include size(100%, 10%);
+
+                span {
+                    @include text-layout($size: 16px, $l_height: 20px, $color: $primary-color, $weight: 600);
+
+                    @include phonePro {
+                        font-size: 12px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 10px;
+                    }
+                }
+
+                .filter {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 2%);
+                    @include size(20%, 90%);
+
+                    @include tabletPro {
+                        width: 20%;
+                    }
+
+                    @include tabletMini {
+                        width: 30%;
+                    }
+
+                    @include phonePro {
+                        width: 40%;
+                    }
+
+                    @include phoneMini {
+                        width: 50%;
+                    }
+
+                    .sortIcon {
+                        font-size: 1.2rem;
+                        color: $primary-color;
+                        position: absolute;
+                        left: 1.5%;
+                        z-index: 1;
+
+                        @include phoneMini {
+                            font-size: 1rem;
+                        }
+                    }
+        
+                    select {
+                        @include size(100%, 100%);
+                        border: none;
+                        position: relative;
+                        border-bottom: 1px solid $primary-color;
+                        padding: 0% 0% 0% 18%;
+                        font-size: 13px;
+                        color: $primary-color;
+                        background-color: transparent;
+                        @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+
+                        @include phonePro {
+                            font-size: 12px;
+                            padding: 0% 0% 0% 15%;
+                        }
+
+                        @include phoneMini {
+                            font-size: 10px;
+                        }
+        
+                        option {
+                            color: black;
+                        }
+                    }
+                    
+                    :focus {
+                        outline-color: transparent;
+                    }
+                }
+            }
+
+            .table {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 0%);
+                @include size(100%, 85%);
+                column-gap: 2%;
+    
+                @include phonePro {
+                    width: 100%;
+                }
+    
+                .tableHead {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 0%);
+                    @include size(100%, 40px);
+                    background-color: $primary-color;
+                    @include text-layout($size: 14.5px, $l_height: 20px, $color: white, $weight: 600);
+    
+                    @include phonePro {
+                        font-size: 11px;
+                        font-weight: 600;
+                    }
+    
+                    @include phoneMini {
+                        font-size: 9px;
+                    }
+    
+                    span {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(20%, 100%);
+
+                        @include phonePro {
+                            width: 23%;
+                        }
+                    }
+                }
+
+                .bodyContainer {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 0%);
+                    row-gap: 0%;
+                    padding: 0%;
+                    @include size(100%, 95%);
+                    overflow-y: hidden;
+                    overflow-x: hidden;
+
+                    .tableBody {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: space-between, $gap: 0%);
+                        @include size(100%, 40px);
+                        @include text-layout($size: 13px, $l_height: 20px, $color: black, $weight: 500);
+        
+                        @include phonePro {
+                            font-size: 9px;
+                            line-height: 13px;
+                        }
+        
+                        @include phoneMini {
+                            font-size: 8px;
+                        }
+        
+                        span {
+                            //border: 1px solid red;
+                            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                            @include size(20%, 100%);
+
+                            @include phonePro {
+                                width: 23%;
+                                text-align: center;
+                            }
+                        }
+
+                        .button {
+                            //border: 1px solid red;
+                            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                            @include size(20%, 100%);
+
+                            @include phonePro {
+                                width: 23%;
+                            }
+
+                            button {
+                                background-color: transparent;
+                                border: none;
+                                @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                                @include size(50%, 100%);
+
+                                .icon {
+                                    font-size: 2.1rem;
+
+                                    @include tabletPro {
+                                        z-index: 20;
+                                    }
+
+                                    @include phonePro {
+                                        font-size: 1.5rem;
+                                    }
+                                }
+
+                                &:hover, &:active {
+                                    .icon {
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+
+                    .emptyBody {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
+                        @include size(100%, 75%);
+
+                        h4 {
+                            color: $primary-color;
+                            margin-bottom: 10px;
+                        }
+
+                        span {
+                            font-size: 13px;
+
+                            @include phonePro {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+
+                @for $i from 1 through 100 {
+                    @if $i % 2 == 1 {
+                      .body#{$i} {
+                        background-color: $secondary-color;
+                      }
+                    }
+                  }
+
+    
+                .tableBottom {
+                    @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 20%);
+                    @include size(100%, 45px);
+                    background-color: black;
+                    @include text-layout($size: 13px, $l_height: 20px, $color: white, $weight: 500);
+    
+                    @include tablet {
+                        gap: 10%;
+                    }
+    
+                    @include phonePro {
+                        font-size: 11px;
+                        line-height: 15px;
+    
+                        gap: 5%;
+                    }
+    
+                    @include phoneMini {
+                        font-size: 9px;
+                    }
+    
+                    span {
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(25%, 100%);
+                    }
+    
+                    .span1 {
+                        width: 30%;
+    
+                        @include tablet {
+                            width: 40%;
+                        }
+    
+                        @include phonePro {
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.inActiveModal {
+    display: none;
+}
+
+.activeModal {
+    //border: 1px solid red;
+    @include size ($width: 100%, $height: 100%);
+    @include flexBar ($align: center, $justify: center, $gap: 1%, $flex_d: row, $flex: none);
+    z-index: 100;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .container {
+        border: 2px solid $text-color-4;
+        border-radius: 10px;
+        background-color: white;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 3%);
+        padding: 1% 5%;
+        @include size(30%, 400px);
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+        top: 5%;
+        left: 10%;
+
+        @include tabletPro {
+            @include size(60%, 500px);
+            left: 5%;
+        }
+
+        @include phonePro {
+            @include size(80%, 450px);
+            left: 0%;
+        }
+
+        .closeIcon {
+            //border: 1px solid red;
+            position: absolute;
+            left: 90%;
+            top: 5%;
+
+            @include phonePro {
+                left: 85%;
+            }
+
+            &:hover, &:active {
+                color: $primary-color;
+            }
+        }
+
+        .transactionContent {
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: space-between, $gap: 0%);
+            //border: 1px solid red;
+            @include size(100%, 85%);
+            top: 3%;
+
+            .receipt {
+                //border: 1px solid red;
+                font-size: 5rem;
+                color: $primary-color;
+            }
+
+            .content {
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+                //border: 1px solid red;
+                @include size(100%, 70%);
+
+                span {
+                    //border: 1px solid red;
+                    font-family: "Poppins";
+                    @include text-layout($size: 13px, $l_height: 20px, $color: black, $weight: 500);
+                    @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
+                    @include size(100%, 10%);
+                    text-align: start;
+
+                    @include phonePro {
+                        font-size: 10px;
+                    }
+
+                    @include phoneMini {
+                        font-size: 8px;
+                    }
+    
+                    strong {
+                        color: $primary-color;
+                    }
+                }
+            }
+            
+        }
+
+        .investContent {
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: space-between, $gap: 0%);
+            //border: 1px solid red;
+            @include size(100%, 85%);
+            top: 3%;
+
+            .pay {
+                //border: 1px solid red;
+                position: relative;
+                font-size: 7rem;
+                color: $primary-color;
+                top: 2%;
+            }
+
+            .investComponent {
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+                //border: 1px solid red;
+                @include size(100%, 70%);
+
+                form {
+                    @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+                    //border: 1px solid red;
+                    @include size(100%, 100%);
+                    top: 0%;
+
+                    .selectCrypto, .amount {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(50%, 35px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 70%;
+                        }
+
+                        @include phoneMini {
+                            width: 90%;
+                        }
+    
+                        .cryptoIcon, .amountIcon {
+                            font-size: 1.3rem;
+                            color: $primary-color;
+                            position: absolute;
+                            left: 1.5%;
+                            z-index: 1;
+                        }
+            
+                        input, select {
+                            @include size(100%, 100%);
+                            border: none;
+                            position: relative;
+                            border-bottom: 1px solid $primary-color;
+                            padding: 0% 0% 0% 15%;
+                            font-size: 13px;
+                            color: $primary-color;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 500);
+            
+                            option {
+                                color: black;
+                            }
+                        }
+    
+                        ::placeholder {
+                            position: relative;
+                            font-size: 13px;
+                            color: $primary-color;
+                            overflow: auto;
+                            font-family: "Poppins";
+                          }
+                        
+                        :focus {
+                            outline-color: transparent;
+                        }
+                    }
+    
+                    button {
+                        border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(50%, 40px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 70%;
+                        }
+
+                        @include phoneMini {
+                            width: 90%;
+                        }
+    
+                        span {
+                            position: relative;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+                            text-align: center;
+                        }
+    
+                        &:hover {
+                            background-color: $primary-color;
+    
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .investSpan {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+                    @include size(100%, 50%);
+                    top: -5%;
+                    font-family: "Poppins";
+                    @include text-layout($size: 15px, $l_height: 25px, $color: black, $weight: 500);
+                    text-align: center;
+
+                    @include phonePro {
+                        font-size: 12px;
+                    }
+
+                    .address {
+                        //border: 1px solid $secondary-color;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                        @include size(110%, 20%);
+                        border-radius: 100px;
+                        //background-color: $secondary-color;
+
+                        @include tabletPro {
+                            width: 100%;
+                        }
+
+                        @include phonePro {
+                            gap: 2%;
+                            width: 100%;
+                        }
+
+                        span {
+                            font-weight: 600;
+                        }
+
+                        .copy {
+                            font-size: 1rem;
+                        }
+
+                        &:hover, &:active {
+                            .copy {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .reinvestComponent {
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+                //border: 1px solid red;
+                @include size(100%, 70%);
+
+                form {
+                    @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+                    //border: 1px solid red;
+                    @include size(100%, 100%);
+                    top: 0%;
+
+                    .amount {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(50%, 35px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 70%;
+                        }
+    
+                        .amountIcon {
+                            font-size: 1.3rem;
+                            color: $primary-color;
+                            position: absolute;
+                            left: 1.5%;
+                            z-index: 1;
+                        }
+            
+                        input {
+                            @include size(100%, 100%);
+                            border: none;
+                            position: relative;
+                            border-bottom: 1px solid $primary-color;
+                            padding: 0% 0% 0% 15%;
+                            font-size: 13px;
+                            color: $primary-color;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 500);
+            
+                            option {
+                                color: black;
+                            }
+                        }
+    
+                        ::placeholder {
+                            position: relative;
+                            font-size: 13px;
+                            color: $primary-color;
+                            overflow: auto;
+                            font-family: "Poppins";
+                          }
+                        
+                        :focus {
+                            outline-color: transparent;
+                        }
+                    }
+    
+                    button {
+                        border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(50%, 40px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 70%;
+                        }
+    
+                        span {
+                            position: relative;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+                            text-align: center;
+                        }
+    
+                        &:hover {
+                            background-color: $primary-color;
+    
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .reinvestSpan {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+                    @include size(70%, 50%);
+                    top: -15%;
+                    font-family: "Poppins";
+                    @include text-layout($size: 15px, $l_height: 25px, $color: black, $weight: 500);
+                    text-align: center;
+
+                    // .address {
+                    //     border: 1px solid $secondary-color;
+                    //     @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                    //     @include size(110%, 20%);
+                    //     border-radius: 100px;
+                    //     background-color: $secondary-color;
+
+                    //     span {
+                    //         font-weight: 600;
+                    //     }
+
+                    //     .copy {
+                    //         font-size: 1rem;
+                    //     }
+
+                    //     &:hover, &:active {
+                    //         .copy {
+                    //             color: $primary-color;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+            
+        }
+
+        .withdrawContent {
+            @include flexBar($position: relative, $align: center, $flex_d: column, $justify: space-between, $gap: 0%);
+            //border: 1px solid red;
+            @include size(100%, 85%);
+            top: 3%;
+
+            .wallet {
+                //border: 1px solid red;
+                font-size: 7rem;
+                color: $primary-color;
+            }
+
+            .withdrawInvestmentComponent {
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+                //border: 1px solid red;
+                @include size(100%, 70%);
+
+                form {
+                    @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 7%);
+                    //border: 1px solid red;
+                    @include size(100%, 100%);
+                    top: 3%;
+
+                    .selectCrypto, .address, .amount {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(60%, 35px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 70%;
+                        }
+
+                        @include phoneMini {
+                            width: 90%;
+                        }
+    
+                        .cryptoIcon, .walletIcon, .amountIcon {
+                            font-size: 1.3rem;
+                            color: $primary-color;
+                            position: absolute;
+                            left: 1.5%;
+                            z-index: 1;
+                        }
+            
+                        input, select {
+                            @include size(100%, 100%);
+                            border: none;
+                            position: relative;
+                            border-bottom: 1px solid $primary-color;
+                            padding: 0% 0% 0% 12%;
+                            font-size: 13px;
+                            color: $primary-color;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 500);
+            
+                            option {
+                                color: black;
+                            }
+                        }
+    
+                        ::placeholder {
+                            position: relative;
+                            font-size: 13px;
+                            color: $primary-color;
+                            overflow: auto;
+                            font-family: "Poppins";
+                          }
+                        
+                        :focus {
+                            outline-color: transparent;
+                        }
+                    }
+    
+                    button {
+                        border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(60%, 40px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 70%;
+                        }
+
+                        @include phoneMini {
+                            width: 90%;
+                        }
+    
+                        span {
+                            position: relative;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+                            text-align: center;
+                        }
+    
+                        &:hover {
+                            background-color: $primary-color;
+    
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .withdrawInvestmentSpan {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+                    @include size(100%, 50%);
+                    top: -5%;
+                    font-family: "Poppins";
+                    @include text-layout($size: 15px, $l_height: 25px, $color: black, $weight: 500);
+                    text-align: center;
+
+                    .address {
+                        border: 1px solid $secondary-color;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                        @include size(110%, 20%);
+                        border-radius: 100px;
+                        background-color: $secondary-color;
+
+                        span {
+                            font-weight: 600;
+                        }
+
+                        .copy {
+                            font-size: 1rem;
+                        }
+
+                        &:hover, &:active {
+                            .copy {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .withdrawDividendComponent {
+                @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 10%);
+                //border: 1px solid red;
+                @include size(100%, 70%);
+
+                form {
+                    @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 7%);
+                    //border: 1px solid red;
+                    @include size(100%, 100%);
+                    top: 3%;
+
+                    .selectCrypto, .address, .amount {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(60%, 35px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 90%;
+                        }
+    
+                        .cryptoIcon, .walletIcon, .amountIcon {
+                            font-size: 1.3rem;
+                            color: $primary-color;
+                            position: absolute;
+                            left: 1.5%;
+                            z-index: 1;
+                        }
+            
+                        input, select {
+                            @include size(100%, 100%);
+                            border: none;
+                            position: relative;
+                            border-bottom: 1px solid $primary-color;
+                            padding: 0% 0% 0% 12%;
+                            font-size: 13px;
+                            color: $primary-color;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 500);
+            
+                            option {
+                                color: black;
+                            }
+                        }
+    
+                        ::placeholder {
+                            position: relative;
+                            font-size: 13px;
+                            color: $primary-color;
+                            overflow: auto;
+                            font-family: "Poppins";
+                          }
+                        
+                        :focus {
+                            outline-color: transparent;
+                        }
+                    }
+    
+                    button {
+                        border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+                        @include size(60%, 40px);
+                        background-color: transparent;
+                        top: -5%;
+
+                        @include phonePro {
+                            width: 90%;
+                        }
+    
+                        span {
+                            position: relative;
+                            @include text-layout($size: 15px, $l_height: 20px, $color: $primary-color, $weight: 600);
+                            text-align: center;
+                        }
+    
+                        &:hover {
+                            background-color: $primary-color;
+    
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .withdrawDividendSpan {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+                    @include size(100%, 50%);
+                    top: -10%;
+                    font-family: "Poppins";
+                    @include text-layout($size: 15px, $l_height: 25px, $color: black, $weight: 500);
+                    text-align: center;
+
+                    // .address {
+                    //     border: 1px solid $secondary-color;
+                    //     @include flexBar($position: relative, $align: center, $justify: center, $gap: 5%);
+                    //     @include size(110%, 20%);
+                    //     border-radius: 100px;
+                    //     background-color: $secondary-color;
+
+                    //     span {
+                    //         font-weight: 600;
+                    //     }
+
+                    //     .copy {
+                    //         font-size: 1rem;
+                    //     }
+
+                    //     &:hover, &:active {
+                    //         .copy {
+                    //             color: $primary-color;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+            
+        }
+    }
+}

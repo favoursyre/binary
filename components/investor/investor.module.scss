@@ -1,0 +1,96 @@
+/* This contains the scss for the investors component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid $primary-color;
+    @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 2%);
+    @include size($height: 200px);
+    margin: 0px;
+    left: 0px;
+    top: 3000px;
+    padding: 2% 0%;
+    border-top: 1px solid $text-color-3;
+    border-bottom: 1px solid $text-color-3;
+    //background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), transparent);
+
+    @include tabletPro {
+        top: 2800px;
+    }
+
+    @include tablet {
+        top: 2700px;
+    }
+
+    @include phonePro {
+        top: 4100px;
+        height: 150px;
+    }
+
+    .heading {
+        //border: 1px solid red;
+        @include text-layout($size: 20px, $l_height: 30px, $color: black, $weight: 600);
+        @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+        font-family: "Aclonica";
+        @include size(90%, 20%);
+        text-align: center;
+        top: 5%;
+
+        @include phonePro {
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        @include phoneMini {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+
+    .investors {
+        //border: 1px solid red;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        @include flexBar($position: relative, $align: space-between, $justify: center, $flex_d: row, $gap: 0%);
+        column-gap: 5%;
+        row-gap: 0%;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        padding: 1% 1%;
+        @include size(50%, 60%);
+        top: 10%;
+
+        @include tabletPro {
+            width: 55%;
+        }
+
+        @include tablet {
+            width: 60%;
+        }
+
+        @include phonePro {
+            @include size(90%, 40%);
+            top: 5%;
+        }
+
+        .imageDiv {
+            //border: 1px solid red;
+            @include size(15%, 30%);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            overflow: hidden;
+
+            @include phonePro {
+                @include size(15%, 40%);
+            }
+
+            .image {
+                //border: 1px solid red;
+                position: relative;
+                object-fit: contain;
+                @include size(100%, 100%);
+            }
+        }
+    }
+}

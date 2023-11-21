@@ -1,0 +1,295 @@
+/* This contains the scss for the our leadership component */
+
+//Libraries -->
+@import "../../styles/base.module";
+
+//Commencing the code -->
+.leadershipHero {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 2%);
+    @include size($height: 500px);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    
+    .gradientOverlay {
+        //border: 1px solid green;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 1;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .image {
+        object-fit: cover;
+        object-position: center 65%;
+        position: absolute;
+        @include size(100%, 100%);
+    }
+
+    .brief {
+        //border: 1px solid red;
+        z-index: 3;
+        @include flexBar($position: relative, $align: center, $flex_d: column, $justify: center, $gap: 0%);
+        @include size(70%, 70%);
+        top: 15%;
+
+        @include tabletPro {
+            top: 5%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include phonePro {
+            width: 80%;
+            top: 3%;
+        }
+
+        .brief1 {
+            @include text-layout($size: 60px, $l_height: 65px, $color: white, $weight: 600);
+            @include flexBar($position: relative, $align: center, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Aclonica";
+            @include size(100%, 50%);
+            //border: 1px solid red;
+
+            @include tabletPro {
+                top: 5%;
+            }
+
+            @include phonePro {
+                font-size: 30px;
+                line-height: 35px;
+                //text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+
+        .brief2 {
+            @include text-layout($size: 15px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include flexBar($position: relative, $align: flex-start, $flex_d: row, $justify: center, $gap: 3%);
+            font-family: "Poppins";
+            @include size(90%, 50%);
+            left: 0%;
+            top: 0%;
+            //border: 1px solid red;
+
+            @include tabletPro {
+                //top: 5%;
+            }
+
+            @include tablet {
+                //width: 90%;
+            }
+
+            @include phonePro {
+                font-size: 13px;
+                line-height: 17px;
+                width: 100%;
+                top: -10%;
+                text-align: center;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+                line-height: 15px;
+                //top: -5%;
+            }
+        }
+    }
+}
+
+.container {
+    //border: 1px solid red;
+    @include flexBar($align: center, $justify: center, $gap: 2%);
+    @include size($height: 1000px);
+    margin: 0px;
+    left: 0px;
+    top: 500px;
+
+    @include phonePro {
+        height: 1550px;
+    }
+
+    @include phoneMini {
+        height: 1300px;
+    }
+
+    .leaders {
+        //border: 1px solid red;
+        @include size(90%, 90%);
+        overflow: hidden;
+        @include flexBar($position: relative, $align: space-between, $justify: center, $flex_d: row);
+        column-gap: 2%;
+        row-gap: 0%;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        padding: 1% 1%;
+
+        @include tabletPro {
+            width: 95%;
+            padding: 1% 0%;
+        }
+
+        @include phonePro {
+            height: 95%;
+            column-gap: 3%;
+        }
+
+        .leader {
+            //border: 2px solid $text-color-4;
+            border-radius: 10px;
+            @include flexBar($position: relative, $align: flex-start, $justify: center, $flex_d: column, $gap: 0%);
+            @include size(18%, 30%);
+            font-family: 'Poppins';
+            padding: 0% 2%;
+
+            @include tabletPro {
+                width: 21%;
+                padding: 0% 1%;
+            }
+
+            @include tablet {
+                width: 20%;
+                align-items: center;
+            }
+
+            @include phonePro {
+                @include size(45%, 15%);
+                padding: 0% 1%;
+                align-items: center;
+            }
+
+            @include phoneMini {
+                width: 44%;
+            }
+
+            .imageDiv {
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
+                @include size(60%, 50%);
+                border-radius: 5px;
+                //border: 1px solid red;
+                overflow: hidden;
+                margin-bottom: 15px;
+
+                .image {
+                    object-fit: cover;
+                    //object-position: center 50%;
+                    position: absolute;
+                    @include size(100%, 100%);
+                }
+
+                @include tablet {
+                    width: 70%;
+                }
+
+                @include phonePro {
+                    @include size(70%, 50%);
+                    //top: 4%
+                }
+
+                @include phoneMini {
+                    //height: 30%;
+                }
+            }
+
+            .name {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: flex-start,  $gap: 0%);
+                @include size(100%, 10%);
+                @include text-layout($size: 15px, $l_height: 20px, $color: black, $weight: 600);
+
+                @include tablet {
+                    font-size: 13px;
+                    height: 7%;
+                    justify-content: center
+                }
+
+                @include phonePro {
+                    font-size: 13px;
+                    height: 10%;
+                    justify-content: center;
+                }
+
+                @include phoneMini {
+                    font-size: 10px;
+                    height: 10%;
+                }
+            }
+
+            .role {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: flex-start,  $gap: 0%);
+                @include size(100%, 10%);
+                @include text-layout($size: 13px, $l_height: 15px, $color: black, $weight: 500);
+                margin-bottom: 5px;
+
+                @include tablet {
+                    font-size: 11px;
+                    justify-content: center
+                }
+
+                @include phonePro {
+                    font-size: 11px;
+                    height: 7%;
+                    justify-content: center;
+                    text-align: center;
+                    line-height: 11px;
+                    //top: 1%;
+                    margin-top: 4px;
+                }
+
+                @include phoneMini {
+                    font-size: 8px;
+                    line-height: 9px;
+                    //height: 10%;
+                }
+            }
+
+            .more {
+                //border: 1px solid red;
+                @include flexBar($position: relative, $align: center, $justify: flex-start,  $gap: 0%);
+                @include size(100%, 10%);
+                @include text-layout($size: 11.5px, $l_height: 15px, $color: black, $weight: 600);
+                background-color: transparent;
+                border: none;
+
+                @include tablet {
+                    font-size: 10px;
+                    justify-content: center
+                }
+
+                @include phonePro {
+                    font-size: 10px;
+                    justify-content: center;
+                    //height: 7%;
+                }
+
+                @include phoneMini {
+                    font-size: 8px;
+                    //height: 10%;
+                }
+
+                .icon {
+                    font-size: 1.3rem;
+                    color: $text-color-3;
+
+                    @include phoneMini {
+                        font-size: 1rem;
+                    }
+                }
+
+                &:hover {
+                    .icon {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
