@@ -245,12 +245,12 @@ const Login = () => {
         e.preventDefault()
         
         const currentTime: number = new Date().getTime();
-        console.log("Time: ", currentTime)
+        //console.log("Time: ", currentTime)
       
         const lastSavedTime = getItem(requestTimeKey)
-        console.log("Last: ", lastSavedTime)
-        console.log(`Countdown 1: ${requestCountdown}s`);
-        console.log(`Difference: ${currentTime - lastSavedTime}`)
+        //console.log("Last: ", lastSavedTime)
+        //console.log(`Countdown 1: ${requestCountdown}s`);
+        //console.log(`Difference: ${currentTime - lastSavedTime}`)
 
         
         let j: number
@@ -259,13 +259,13 @@ const Login = () => {
             //Saving current time
             setItem(requestTimeKey, currentTime)
             loginPageModal(e, true, "link")
-            console.log("opening modal")
+            //console.log("opening modal")
             //Start countdown from 60 seconds
             //let requestCountdown = 60;
             let j = 90
         setRequestCountDown(() => j)
 
-            console.log(`Countdown 4: ${j}s`);
+            //console.log(`Countdown 4: ${j}s`);
             //for (let i = j; i >= j; i--) {
             //    console.log(`Iteration ${i}`)
            // }
@@ -276,14 +276,14 @@ const Login = () => {
                j--;
                  //setRequestCountDown(() => requestCountdown--);
                   setRequestCountDown(() => j)
-                   console.log(`Countdown 2: ${j}s`);
+                   //console.log(`Countdown 2: ${j}s`);
                     
-                    console.log(`Countdown 3: ${requestCountdown}s`);
+                    //console.log(`Countdown 3: ${requestCountdown}s`);
                     //setRequestCountDown(() => countdown)
               } else if (j === 0) {
                     setItem(requestTimeKey, currentTime)
                     setRequestCountDown(() => j)
-                    console.log("Ended")
+                    //console.log("Ended")
                     clearInterval(countdownInterval);
                 }
     

@@ -9,12 +9,13 @@ import styles from "./layout.module.scss"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { EdgeStoreProvider } from '@/config/edgestore';
+import { domainName } from '@/config/utils';
 
 ///Commencing the code
 
 ///Declaring the metadata
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN_NAME), 
+  metadataBase: new URL(domainName), 
   title: {
     default: `${companyName}`,
     template: `%s | ${companyName}`
@@ -22,8 +23,8 @@ export const metadata: Metadata = {
   icons: {
     icon: 'favicon.ico',
   },
-  description: `Embark on a revolutionary financial journey with ${companyName}. Explore our avant-garde platform for tokenized mutual funds,where traditional mutual funds meet the power of blockchain. Unlock new possibilities in wealth creation and financial freedom. Join us in reshaping the landscape of modern finance – your gateway to a smarter, more secure future.`,
-  keywords: "investment, token, cryptocurrency, tokenized mutual funds, mutual funds, web3, finance, business, stocks, tokenized stocks"
+  description: `Explore our platform for tokenized mutual funds, where traditional mutual funds meets the power of blockchain. Unlock new possibilities in wealth creation and financial freedom. Join us in reshaping the landscape of modern finance – your gateway to a smarter, more secure future.`,
+  keywords: "investment, token, cryptocurrency, tokenized mutual funds, mutual funds, web3, finance, business, stocks, tokenized stocks, defi, digital, dividends"
 }
 
 export default function RootLayout({

@@ -2,7 +2,7 @@
 
 ///Libraries -->
 import { IFAQs, IIDentification, IMileStone, IDividend, ILeader, IWhatWeDo, IEndeavor, IPrinciple, ITestimonial, IAboutUsLink, ICrypto, IInvestor } from "@/config/interfaces";
-import { companyName, yearCreated, minInvestAmount, annualPercentage, lockInPeriod, formatCryptos, getItemByKey } from "@/config/utils";
+import { companyName, yearCreated, minInvestAmount, annualPercentage, lockInPeriod, formatCryptos } from "@/config/utils";
 
 //Commencing code
 export const countryList: Array<string> = [
@@ -292,6 +292,11 @@ export const cryptos: Array<ICrypto> = [
             width: 2000,
             height: 2000
         },
+        // image: {
+        //     src: usd.src,
+        //     width: usd.width,
+        //     height: usd.height
+        // },
         name: "USD Coin (ERC20)",
         symbol: "USDC",
         address: "0x72EfCd9dbde6BF2a70D2f72a1D714f80ddB02da6"
@@ -315,7 +320,7 @@ export const faqs: Array<IFAQs> = [
         answer: "Tokenized mutual funds refer to traditional mutual funds that are converted into digital tokens on a blockchain. Each token represents a share in the mutual fund. By tokenizing these funds, investors can buy, sell and trade shares using cryptocurrencies and blockchain technology. This innovation provides greater accessibility, transparency and liquidity for investors, making the process of investing in mutual funds more efficient and secure in the digital age."
     },
     { 
-        question: "What is a cryptocurrency?", 
+        question: "What is a Cryptocurrency?", 
         answer: "Cryptocurrency is a digital currency that uses cryptography for secure, decentralized transactions. Operating on blockchain technology, it ensures transparency, limited supply and global accessibility. They're used for various purposes in the digital economy, from online transactions to powering decentralized applications."
     },
     { 
