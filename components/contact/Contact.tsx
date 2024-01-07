@@ -147,7 +147,7 @@ const Contact = () => {
                     </div>
                     <span>541 Montgomery Street, San Francisco, CA 94111, United States.</span>
                 </div>
-                <div id={styles.brief4}>
+                <div id={styles.brief4} style={{ display: "none" }}>
                     <div className={styles.heading}>
                         <WhatsappIcon className={styles.icon} />
                         <h4>

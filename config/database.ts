@@ -333,7 +333,7 @@ export const faqs: Array<IFAQs> = [
     },
     { 
         question: `Where can I buy cryptocurrency from in other to invest into ${companyName}?`, 
-        answer: "Depending on your location you can cryptocurrency from trusted platforms like Binance, Coinbase, Luno, Blockchain.com, Kraken, etc. You can contact our support team for tailored guidance to avoid making mistakes and loosing your funds."
+        answer: "Depending on your location you can buy cryptocurrency from trusted platforms like Binance, Coinbase, Luno, Blockchain.com, Kraken, etc. You can contact our support team for tailored guidance to avoid making mistakes and loosing your funds."
     },
     { 
         question: `Is there a limit to how much I can invest into ${companyName}`, 
@@ -510,13 +510,13 @@ export const dividends: Array<IDividend> = [
     {
         year: 2023,
         recordDate: [
-            "28-01-2023", "28-02-2023", "28-03-2023", "28-04-2023", "28-05-2023" , "28-06-2023", "28-07-2023", "28-08-2023", "28-09-2023", "28-10-2023"
+            "28-01-2023", "28-02-2023", "28-03-2023", "28-04-2023", "28-05-2023" , "28-06-2023", "28-07-2023", "28-08-2023", "28-09-2023", "28-10-2023", "28-11-2023", "28-12-2023"
         ],
         payDate: [
-            "03-02-2023", "03-03-2023", "03-04-2023", "03-05-2023", "03-06-2023", "03-07-2023", "03-08-2023", "03-09-2023", "03-10-2023", "03-11-2023"
+            "03-02-2023", "03-03-2023", "03-04-2023", "03-05-2023", "03-06-2023", "03-07-2023", "03-08-2023", "03-09-2023", "03-10-2023", "03-11-2023", "03-12-2023", "03-01-2024"
         ],
         totalMutualFunds: [
-            48551241547, 51001221475, 53410111241, 55100142140, 57412145124, 58114214111, 60001241245, 61751241241, 64441247457, 66471547220
+            48551241547, 51001221475, 53410111241, 55100142140, 57412145124, 58114214111, 60001241245, 61751241241, 64441247457, 66471547220, 67871548510, 68100571458
         ]
     }
 ]

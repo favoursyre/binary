@@ -3,7 +3,7 @@
 ///Libraries -->
 import nodemailer from "nodemailer"
 import { IAccount, IInquiry, ITransaction } from "./interfaces"
-import { companyEmail, companyName, SUPPORT_EMAIL, SUPPORT_PASSWORD, domainName } from "./utils"
+import { companyName, SUPPORT_EMAIL, SUPPORT_PASSWORD, domainName } from "./utils"
 
 ///Commencing the code
 
@@ -31,16 +31,20 @@ export const sendEmail = (
           // host: 'smtp.privateemail.com', // Replace with your SMTP host
           // port: 465, // Replace with your SMTP port
           // secure: true, // Set to true if using a secure connection (e.g., port 465)
-          host: "smtp.titan.email",
-          port: 465,
-          secure: true,
+          //host: "smtp.titan.email",
+          host: "smtp-mail.outlook.com",
+          port: 587,
+          secure: false,
             //service: 'gmail',
             //providerAuth
-            authMethod: 'PLAIN',
+            //authMethod: 'PLAIN',
             auth: {
               user: senderEmail,
               pass: senderPassword
-            }
+            },
+            tls: {
+              ciphers:'SSLv3'
+          }
           });
 
 
@@ -58,7 +62,7 @@ export const sendEmail = (
         // transporter.use('compile', hbs(handlebarOptions))
 
           let mailOptions = {
-            from: `${senderName} <${senderEmail}>`,
+            from: `${senderName} Support <${senderEmail}>`,
             to: recipientEmail,
             subject: subject,
             text: body,

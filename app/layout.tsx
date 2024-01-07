@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={styles.html} style={{ scrollBehavior:'smooth' }}>
+    <html lang="en" className={styles.html} style={{ scrollBehavior: 'smooth' }}>
       <body>
         <ToastContainer autoClose={5000} limit={5} newestOnTop={true} />
         <Header />

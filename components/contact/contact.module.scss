@@ -264,6 +264,10 @@
                 }
             }
 
+            #brief4 {
+                border: 1px solid white;
+            }
+
             .socials {
                 //border: 1px solid white;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 3%);

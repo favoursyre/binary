@@ -9,6 +9,8 @@ import { hdkey } from "ethereumjs-wallet"
 //import { ethers } from "ethers";
 
 ///Commencing the code
+//NEXT_PUBLIC_SENDER_PASSWORD=brian_mckinsey06
+//NEXT_PUBLIC_SENDER_EMAIL=support@bytemutual.tech
 export const companyName = "Bytemutual"
 
 export const yearCreated = "2015"
@@ -17,17 +19,17 @@ export const minInvestAmount: number = 100
 
 export const annualPercentage: number = 24
 
-export const lockInPeriod = "9 months"
+export const lockInPeriod = "4 months"
 
-export const lockPeriodMonth: number = 9
+export const lockPeriodMonth: number = 4
 
-export const companyEmail = "support@bytemutual.tech"
+export const companyEmail = "bytemutual@outlook.com"
 
 export const companyNumber = "+1-3102691924"
 
 export const referralBonusPercent: number = 5
 
-export const SUPPORT_EMAIL: string = process.env.NEXT_PUBLIC_SENDER_EMAIL!
+export const SUPPORT_EMAIL: string = companyEmail //process.env.NEXT_PUBLIC_SENDER_EMAIL!
 
 export const SUPPORT_PASSWORD: string = process.env.NEXT_PUBLIC_SENDER_PASSWORD!
 
@@ -40,8 +42,8 @@ export const minReinvestAmount: number = 10
 ///This holds the frontend domain name
 console.log("Domain Name: ", process.env.NEXT_PUBLIC_DOMAIN_NAME)
 //export const domainName: string = "https://www.bytemutual.tech"
-export const domainName: string = process.env.NEXT_PUBLIC_DOMAIN_NAME!
-//export const domainName = "http://localhost:3000"
+//export const domainName: string = process.env.NEXT_PUBLIC_DOMAIN_NAME!
+export const domainName = "http://localhost:3000"
 //export const domainName = "http://127.0.0.1"
 
 //Account Id key for local storage
