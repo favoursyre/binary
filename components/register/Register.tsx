@@ -7,7 +7,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { routeStyle, domainName, capitalizeFirstLetter } from "@/config/utils";
 import { notify } from "@/config/clientUtils";
 import { countryList } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 import { useState, FormEvent, ChangeEvent } from "react";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PersonIcon from '@mui/icons-material/Person';
@@ -129,7 +129,7 @@ const Register = ({ id }: { id: string | undefined }) => {
     <>
         <div className={`${styles.registerHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1a4ZAkNpBf_yqdqXmi5EPEjy1VLvXElDw"}
                 alt=""
@@ -236,7 +236,7 @@ const Register = ({ id }: { id: string | undefined }) => {
                 }} />
                 <span className={styles.span1}>A verification link has been sent to your email, check your inbox/spam</span>
                 <div className={styles.imageDiv}>
-                    <img 
+                    <Image 
                         className={styles.image}
                         src={"https://drive.google.com/uc?export=download&id=1l6toWHyg0Mht8CwtLmm0g_C3AfmFjUIN"}
                         alt=""

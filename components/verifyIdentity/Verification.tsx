@@ -12,7 +12,7 @@ import { IAccount, IFileAttachment, IIDentification, IReferralInfo, IVerificatio
 } from "@/config/interfaces";
 import { notify } from "@/config/clientUtils";
 import { identifications } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 import { useState, FormEvent, useRef, DragEvent, ChangeEvent, MouseEvent, useEffect } from "react";
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
@@ -204,7 +204,7 @@ const Verification = ({ account_ }: { account_: IAccount }) => {
     <>
         <div className={`${styles.verificationHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img
+            <Image
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1oKeqFuGe41MjQFaYYYvfwq8NtFM1UIPs"}
                 alt=""
@@ -236,13 +236,23 @@ const Verification = ({ account_ }: { account_: IAccount }) => {
                     <div className={styles.dragFile}>
                         <span>{file ? file?.name : "Drag and Drop File to Upload Or"}</span>
                         <div className={styles.imageDiv}>
-                            <img 
-                                className={styles.image}
-                                src={file ? file?.url : "https://drive.google.com/uc?export=download&id=1ViAwi1sFTkqsRUhUPv0uaiN8S9PvHUXw"}
-                                alt=""
-                                width={file ? file?.width : 2048}
-                                height={file ? file?.height : 1587}
-                            />
+                            {file ? (
+                                <img 
+                                    className={styles.image}
+                                    src={file ? file?.url : ""}
+                                    alt=""
+                                    width={file ? file?.width : 2048}
+                                    height={file ? file?.height : 1587}
+                                />
+                            ) : (
+                                <Image 
+                                    className={styles.image}
+                                    src={file ? file?.url : "https://drive.google.com/uc?export=download&id=1ViAwi1sFTkqsRUhUPv0uaiN8S9PvHUXw"}
+                                    alt=""
+                                    width={file ? file?.width : 2048}
+                                    height={file ? file?.height : 1587}
+                                />
+                            )}
                         </div>
                         <button type="button" onClick={(e) => file ? deleteFileItem(e) : fileInputRef.current?.click()}>
                             {file ? (
@@ -276,7 +286,7 @@ const Verification = ({ account_ }: { account_: IAccount }) => {
                 />
                 <span className={styles.span1}>Thank you for submitting your document for review, we are currently reviewing a large volume of documents  and we are making every effort to expedite the review process without compromising quality. Your understanding is deeply appreciated. </span>
                 <div className={styles.imageDiv}>
-                    <img 
+                    <Image 
                         className={styles.image}
                         src={"https://drive.google.com/uc?export=download&id=16QAmBJNQ1XcJKclCL8W9ivbJ-V-4Dzxc"}
                         alt=""

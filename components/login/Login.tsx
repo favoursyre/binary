@@ -6,7 +6,7 @@ import styles from "./login.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { domainName, sleep, routeStyle, accountIdKey, requestTimeKey } from "@/config/utils";
 import { getItem, notify, removeItem, setItem } from "@/config/clientUtils";
-//import Image from "next/image";
+import Image from "next/image";
 import { useState, FormEvent, useEffect, MouseEvent } from "react";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
@@ -334,7 +334,7 @@ const Login = () => {
     <>
         <div className={`${styles.loginHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1ylwbDdAsMk7M2hPmnbOSIe2O01Ju_jmU"}
                 alt=""

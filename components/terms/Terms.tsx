@@ -4,7 +4,7 @@
 ///Libraries -->
 import styles from "./terms.module.scss"
 import { companyName, companyEmail, lockInPeriod } from "@/config/utils";
-//import Image from "next/image";
+import Image from "next/image";
 
 ///Commencing the code 
 
@@ -18,7 +18,7 @@ const Terms = () => {
     <>
         <div className={`${styles.termsHero}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1F0sG-uI_LcbEZUt6tiwHUXWXNmIN0YMd"}
                 alt=""

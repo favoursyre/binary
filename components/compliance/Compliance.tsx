@@ -4,7 +4,7 @@
 ///Libraries -->
 import styles from "./compliance.module.scss"
 import { companyName } from "@/config/utils";
-//import Image from "next/image";
+import Image from "next/image";
 
 ///Commencing the code 
 
@@ -18,7 +18,7 @@ const Compliance = () => {
     <>
         <div className={`${styles.complianceHero}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=11at3pZT8b6Ia2SatmKCtbLtdnat5fsXq"}
                 alt=""

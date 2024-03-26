@@ -3,7 +3,7 @@
 
 ///Libraries -->
 import styles from "./verify.module.scss"
-//import Image from "next/image";
+import Image from "next/image";
 import { useState, MouseEvent } from "react";
 import { domainName } from "../../config/utils"
 import { notify } from "@/config/clientUtils";
@@ -55,7 +55,7 @@ const VerifyUser = ({ account_ }: { account_: IAccount }) => {
             <span><strong>Name:</strong>{account?.fullName}</span>
             <span><strong>Document Type:</strong>{account?.verification?.document}</span>
             <div className={styles.imageDiv}>
-                <img 
+                <Image 
                     className={styles.image}
                     src={account?.verification?.file?.url}
                     alt=""

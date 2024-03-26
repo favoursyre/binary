@@ -3,7 +3,7 @@
 
 ///Libraries -->
 import styles from "./hero.module.scss"
-//import Image from "next/image";
+import Image from "next/image";
 import { companyName } from "../../config/utils"
 
 ///Commencing the code 
@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <div className={styles.main}>
         <div className={styles.gradientOverlay}></div>
-        <img 
+        <Image 
             className={styles.image}
             src={"https://drive.google.com/uc?export=download&id=1g4TFVlmEsL9B6tDBASAUs1z66rns5qhl"}
             alt=""

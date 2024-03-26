@@ -5,7 +5,7 @@
 import styles from "./history.module.scss"
 import { companyName } from "@/config/utils";
 import { milestones } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 import LearnMoreAboutUs from "../learnMoreAboutUs/LearnMore";
 
 ///Commencing the code 
@@ -20,7 +20,7 @@ const OurHistory = () => {
     <>
         <div className={`${styles.historyHero}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/file/d/1QSoiXVXYKXR2EPFOSe57JD-tZX2p2Qcl/view?usp=drive_link"}
                 alt=""

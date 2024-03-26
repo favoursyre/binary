@@ -4,7 +4,7 @@
 ///Libraries -->
 import styles from "./crypto.module.scss"
 //import { useRouter } from 'next/navigation';
-//import Image from "next/image";
+import Image from "next/image";
 import { cryptos } from "@/config/database";
 
 ///Commencing the code 
@@ -24,7 +24,7 @@ const Crypto = () => {
         <div className={styles.cryptos}>
             {cryptos.map((crypto, id) => (
                 <div className={styles.imageDiv} key={id} >
-                    <img 
+                    <Image 
                         className={styles.image}
                         src={crypto.image.src}
                         alt={crypto.symbol}

@@ -15,7 +15,7 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay, EffectFade } from 's
 import StarIcon from '@mui/icons-material/Star';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-//import Image from "next/image"
+import Image from "next/image"
 import { companyName, shuffleArray } from "@/config/utils";
 import { testimonies } from "@/config/database";
 
@@ -61,7 +61,7 @@ const Testimony = () => {
             {shuffleArray(testimonies).map((testimony, id) => (
                 <SwiperSlide className={styles.slider} key={id}>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={testimony?.image?.src}
                             alt=""

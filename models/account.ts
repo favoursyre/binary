@@ -167,20 +167,20 @@ accountSchema.statics.registerAccount = async function ( account: IAccount ) {
     if (referrerId !== "0") {
       try {
         const id: Types.ObjectId = new ObjectId(referrerId)
-        const refer = await this.find({ _id: id })
+        const refer = await this.find({ _id: referrerId })
         if (refer.length === 0) {
           throw new Error(`
-Invalid Referrer ID
-- Leave the referrer Id blank if no one referred you
-- Put the correct Referral ID of the the person that referred you
-`)
+            Invalid Referrer ID
+            - Leave the referrer Id blank if no one referred you or
+            - Put the correct Referral ID of the the person that referred you
+          `)
         }
       } catch {
         throw new Error(`
-Invalid Referrer ID
-- Leave the referrer Id blank if no one referred you
-- Put the correct Referral ID of the the person that referred you
-`)
+          Invalid Referrer ID
+          - Leave the referrer Id blank if no one referred you
+          - Put the correct Referral ID of the the person that referred you
+        `)
       }
     } 
     const account_ = await this.create({ ...account });

@@ -6,7 +6,7 @@ import styles from "./accountBar.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { companyName, yearCreated, routeStyle, sleep, accountIdKey } from "@/config/utils";
 import { notify, removeItem } from "@/config/clientUtils";
-//import Image from "next/image";
+import Image from "next/image";
 import LogoutIcon from '@mui/icons-material/Logout';
 import PersonIcon from '@mui/icons-material/Person';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
@@ -71,7 +71,7 @@ const AccountBar = ({ account_ }: { account_: IAccount }) => {
       <div className={`${activeBar ? styles.activeBar : styles.inActiveBar} ${routeStyle(routerPath, styles)}`}>
         <div className={styles.main}>
         <div className={styles.logo}>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1THIPUBqHngps-OV2m-Jful5QIDTM-hvz"}
                 alt=""
@@ -84,7 +84,7 @@ const AccountBar = ({ account_ }: { account_: IAccount }) => {
         <div className={styles.profile}>
             <div className={styles.imageDiv}>
               {account && account?.profileImage && account?.profileImage?.url ? (
-                <img 
+                <Image 
                   className={styles.image}
                   src={account?.profileImage?.url}
                   alt=""

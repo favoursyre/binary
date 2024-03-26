@@ -5,7 +5,7 @@
 import styles from "./company.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { companyName, yearCreated, routeStyle } from "@/config/utils";
-//import Image from "next/image";
+import Image from "next/image";
 import { whatWeDo } from "@/config/database";
 import LearnMoreAboutUs from "../learnMoreAboutUs/LearnMore";
 
@@ -22,7 +22,7 @@ const OurCompany = () => {
     <>
         <div className={`${styles.aboutHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1yxCMljUgk8bobu-sqh3YL653LXUZy_Ss"}
                 alt=""
@@ -53,7 +53,7 @@ const OurCompany = () => {
                     <div className={styles.title}>{job.title}</div>
                     <div className={styles.card}>
                         <div className={styles.imageDiv}>
-                            <img 
+                            <Image 
                                 className={styles.image}
                                 src={job.image.src}
                                 alt=""
@@ -78,7 +78,7 @@ const OurCompany = () => {
                     </span>
                 </div>
                 <div className={styles.imageDiv}>
-                    <img 
+                    <Image 
                         className={styles.image}
                         src={"https://drive.google.com/uc?export=download&id=1S9TuFQD3jg-6jeXB5RVAcGtxTz0PdesD"}
                         alt=""
@@ -95,7 +95,7 @@ const OurCompany = () => {
                     </span>
                 </div>
                 <div className={styles.imageDiv}>
-                    <img 
+                    <Image 
                         className={styles.image}
                         src={"https://drive.google.com/uc?export=download&id=1CFAU5USv1h2XaSQ4r7F1ScK-tciPfbix"}
                         alt=""

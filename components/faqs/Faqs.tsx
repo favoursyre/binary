@@ -7,7 +7,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import Link from "next/link";
 import { faqs } from "@/config/database";
 import { routeStyle } from "@/config/utils";
-//import Image from "next/image";
+import Image from "next/image";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 
@@ -30,7 +30,7 @@ const FAQs = () => {
     <>
         <div className={`${styles.faqsHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1IUijgKEBpZqmRs4uL7lezKLijukfwlnV"}
                 alt=""

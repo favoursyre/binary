@@ -6,7 +6,7 @@ import styles from "./reset.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { routeStyle, domainName } from "@/config/utils";
 import { notify } from "@/config/clientUtils";
-//import Image from "next/image";
+import Image from "next/image";
 import { useState, FormEvent } from "react";
 import { IAccount } from "@/config/interfaces";
 import LockIcon from '@mui/icons-material/Lock';
@@ -84,7 +84,7 @@ const ResetPassword = ({ account_ }: { account_: IAccount }) => {
     <>
         <div className={`${styles.resetHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1ylwbDdAsMk7M2hPmnbOSIe2O01Ju_jmU"}
                 alt=""

@@ -19,11 +19,11 @@ export const minInvestAmount: number = 100
 
 export const annualPercentage: number = 24
 
-export const lockInPeriod = "4 months"
+export const lockInPeriod = "6 months"
 
-export const lockPeriodMonth: number = 4
+export const lockPeriodMonth: number = 6
 
-export const companyEmail = "bytemutual@outlook.com"
+export const companyEmail = "support@bytemutual.tech"
 
 export const companyNumber = "+1-3102691924"
 
@@ -40,8 +40,8 @@ export const minWithdrawAmount: number = 10
 export const minReinvestAmount: number = 10
 
 ///This holds the frontend domain name
-console.log("Domain Name: ", process.env.NEXT_PUBLIC_DOMAIN_NAME)
-//export const domainName: string = "https://www.bytemutual.tech"
+//console.log("Domain Name: ", process.env.NEXT_PUBLIC_DOMAIN_NAME)
+//export const domainName: string = "https://bytemutual.tech"
 //export const domainName: string = process.env.NEXT_PUBLIC_DOMAIN_NAME!
 export const domainName = "http://localhost:3000"
 //export const domainName = "http://127.0.0.1"

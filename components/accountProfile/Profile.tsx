@@ -6,7 +6,7 @@ import styles from "./profile.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { readFile, isImage, readImageDimension, domainName, sleep, companyName } from "@/config/utils";
 import { copyToClipboard, notify } from "@/config/clientUtils";
-//import Image from "next/image";
+import Image from "next/image";
 import WalletIcon from '@mui/icons-material/Wallet';
 import { useState, ChangeEvent, DragEvent, MouseEvent, FormEvent, useRef, useEffect } from "react";
 import { IFileAttachment, IAccount } from "@/config/interfaces";
@@ -181,6 +181,7 @@ const Profile = ({ account_ }: { account_: IAccount }) => {
             if (res.ok) {
                 notify("success", `${data.message}`)
                 setLoading(() => false)
+                window.location.reload()
             } else {
                 throw new Error(`${data.message}`)
             }
@@ -310,7 +311,7 @@ const Profile = ({ account_ }: { account_: IAccount }) => {
             <div className={styles.profile}>
                 <div className={styles.imageDiv}>
                   {account && account?.profileImage && account?.profileImage.url ? (
-                    <img
+                    <Image
                       className={styles.image}
                       src={account?.profileImage?.url}
                       alt=""

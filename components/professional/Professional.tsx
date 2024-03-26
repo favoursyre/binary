@@ -3,7 +3,7 @@
 
 ///Libraries -->
 import styles from "./professional.module.scss"
-//import Image from "next/image";
+import Image from "next/image";
 
 ///Commencing the code 
 
@@ -17,7 +17,7 @@ const Professional = () => {
     <>
         <div className={`${styles.professionalHero}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1ITwhTmvvEOU4uB9f8ZpiJ3mOzmvEZzYO"}
                 alt=""
@@ -39,7 +39,7 @@ const Professional = () => {
                         </span>
                     </div>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1CFAU5USv1h2XaSQ4r7F1ScK-tciPfbix"}
                             alt=""
@@ -56,7 +56,7 @@ const Professional = () => {
                         </span>
                     </div>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1Ufj769R0wPMUtxycT6JlUm8TQ_qaaTPj"}
                             alt=""
@@ -73,7 +73,7 @@ const Professional = () => {
                         </span>
                     </div>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1mJyhofEmhQqfVwwTAxUYXcZ5Y5KrtFUw"}
                             alt=""

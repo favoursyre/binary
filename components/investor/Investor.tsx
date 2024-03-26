@@ -4,7 +4,7 @@
 ///Libraries -->
 import styles from "./investor.module.scss"
 import { investors } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 
 ///Commencing the code 
 
@@ -20,7 +20,7 @@ const Investor = () => {
         <div className={styles.investors}>
             {investors.map((investor, id) => (
                 <div className={styles.imageDiv} key={id} >
-                    <img 
+                    <Image 
                         className={styles.image}
                         src={investor.image.src}
                         alt=""

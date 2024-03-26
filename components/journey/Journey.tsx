@@ -3,7 +3,7 @@
 
 ///Libraries -->
 import styles from "./journey.module.scss"
-//import Image from "next/image";
+import Image from "next/image";
 import { annualPercentage, companyName, minInvestAmount, referralBonusPercent } from "@/config/utils";
 
 ///Commencing the code 
@@ -23,7 +23,7 @@ const Journey = () => {
                 <div className={styles.title}>Create Account</div>
                 <div className={styles.card}>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1a4ZAkNpBf_yqdqXmi5EPEjy1VLvXElDw"}
                             alt=""
@@ -39,7 +39,7 @@ const Journey = () => {
                 <div className={styles.title}>Verify Identity</div>
                 <div className={styles.card}>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1oKeqFuGe41MjQFaYYYvfwq8NtFM1UIPs"}
                             alt=""
@@ -55,7 +55,7 @@ const Journey = () => {
                 <div className={styles.title}>Buy {companyName} Token</div>
                 <div className={styles.card}>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1G68RjWAOVMJQvseZX0lphqOsI5kbnVs4"}
                             alt=""
@@ -73,7 +73,7 @@ const Journey = () => {
                 <div className={styles.title}>Earn Dividends</div>
                 <div className={styles.card}>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1ZGEye-WzFeEwzquQUvDPK_yxFwA35Hzf"}
                             alt=""
@@ -89,7 +89,7 @@ const Journey = () => {
                 <div className={styles.title}>Referral Bonus</div>
                 <div className={styles.card}>
                     <div className={styles.imageDiv}>
-                        <img 
+                        <Image 
                             className={styles.image}
                             src={"https://drive.google.com/uc?export=download&id=1jJ-USN7JWPBELrmafaYNnw2_99mls1MS"}
                             alt=""

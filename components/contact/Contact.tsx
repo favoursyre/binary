@@ -6,7 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useState, FormEvent, ChangeEvent } from 'react';
 import validator from 'validator';
 import styles from "./contact.module.scss"
-//import Image from "next/image"
+import Image from "next/image"
 import { domainName, routeStyle, companyEmail, companyNumber, capitalizeFirstLetter } from "@/config/utils";
 import { notify } from "@/config/clientUtils";
 import LocationIcon from "@mui/icons-material/LocationOn";
@@ -108,7 +108,7 @@ const Contact = () => {
     <>
         <div className={`${styles.contactHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1eeNCZLPibEhrwE6rahqqp41WuLqwG0P0"}
                 alt=""

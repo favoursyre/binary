@@ -5,7 +5,7 @@
 import styles from "./foundation.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { companyName,  routeStyle } from "@/config/utils";
-//import Image from "next/image";
+import Image from "next/image";
 import RemoveIcon from '@mui/icons-material/Remove';
 import LearnMoreAboutUs from "../learnMoreAboutUs/LearnMore";
 import { endeavors } from "@/config/database";
@@ -24,7 +24,7 @@ const OurFoundation = () => {
     <>
         <div className={`${styles.foundationHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1DS4d_ipXJY8QoVmV1NlJnLhRqOw4BuzQ"}
                 alt=""

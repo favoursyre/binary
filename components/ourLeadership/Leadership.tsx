@@ -6,7 +6,7 @@ import styles from "./leadership.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { routeStyle, toKebabCase } from "@/config/utils";
 import { leaders } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 //import { useState, MouseEvent } from "react";
 import LearnMoreAboutUs from "../learnMoreAboutUs/LearnMore";
 //import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
@@ -33,7 +33,7 @@ const OurLeadership = () => {
     <>
         <div className={`${styles.leadershipHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1Wgx--ellkwhHrFpnjRXxmIEFvt-GxKVX"}
                 alt=""
@@ -50,7 +50,7 @@ const OurLeadership = () => {
                 {leaders.map((leader, id) => (
                     <div className={styles.leader} key={id}>
                         <div className={styles.imageDiv}>
-                            <img 
+                            <Image 
                                 className={styles.image}
                                 src={leader.image.src}
                                 alt=""

@@ -6,7 +6,7 @@ import styles from "./dividend.module.scss"
 import { useRouter, usePathname } from 'next/navigation';
 import { companyName, getItemByKey, routeStyle, annualPercentage } from "@/config/utils";
 import { dividends } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 import { useState, ChangeEvent } from "react";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
@@ -25,7 +25,7 @@ const headers: Array<string> = [
 const Dividends = () => {
     const router = useRouter()
     const routerPath = usePathname();
-    const [selectedYear, setSelectedYear] = useState<number>(2023)
+    const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear())
 
     ///Handle selected year
     const handleSelectYear = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -54,7 +54,7 @@ const Dividends = () => {
     <>
         <div className={`${styles.dividendHero} ${routeStyle(routerPath, styles)}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1q1mB6dKO-FTdQQWcixxqEMgssNoSR8u-"}
                 alt=""

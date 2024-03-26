@@ -7,7 +7,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useState, MouseEvent, useEffect } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-//import Image from "next/image";
+import Image from "next/image";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import PersonIcon from '@mui/icons-material/Person';
@@ -141,7 +141,7 @@ const Header = () => {
                 )}
             </button>
             <div className={styles.logo} onClick={() => router.push('/')}>
-                <img 
+                <Image 
                     className={styles.image}
                     src={"https://drive.google.com/uc?export=download&id=1THIPUBqHngps-OV2m-Jful5QIDTM-hvz"}
                     alt=""

@@ -4,7 +4,7 @@
 ///Libraries -->
 import styles from "./security.module.scss"
 import { companyName } from "@/config/utils";
-//import Image from "next/image";
+import Image from "next/image";
 import SignalCellularOffIcon from '@mui/icons-material/SignalCellularOff';
 import KeyIcon from '@mui/icons-material/Key';
 import PasswordIcon from '@mui/icons-material/Password';
@@ -26,7 +26,7 @@ const Security = () => {
     <>
         <div className={`${styles.securityHero}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1XeNap3jRw1CPL6Fwg1wmptxcP3OLify4"}
                 alt=""

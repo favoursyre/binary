@@ -6,7 +6,7 @@ import styles from "./principle.module.scss"
 //import { useRouter, usePathname } from 'next/navigation';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { principles } from "@/config/database";
-//import Image from "next/image";
+import Image from "next/image";
 import LearnMoreAboutUs from "../learnMoreAboutUs/LearnMore";
 
 ///Commencing the code 
@@ -24,7 +24,7 @@ const OurPrinciple = () => {
     <>
         <div className={`${styles.principleHero}`}>
             <div className={styles.gradientOverlay}></div>
-            <img 
+            <Image 
                 className={styles.image}
                 src={"https://drive.google.com/uc?export=download&id=1dnj-k7iGYGYuLM3j-0k3BMrYZoQznVLf"}
                 alt=""
