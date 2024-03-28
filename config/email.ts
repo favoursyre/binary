@@ -17,7 +17,7 @@ import { companyName, SUPPORT_EMAIL, SUPPORT_PASSWORD, domainName } from "./util
  * @param body The body message of the email to be sent
  * @returns The status of the sent email, whether successful or not
  */
-export const sendEmail = (
+export const sendEmail = async (
     senderName: string,
     senderEmail: string, 
     senderPassword: string, 
@@ -26,7 +26,7 @@ export const sendEmail = (
     body: string | undefined,
     template: string | undefined,
     context: Object | undefined
-    ): string | void => {
+    ): Promise<string | void> => {
         let transporter = nodemailer.createTransport({
           // host: 'smtp.privateemail.com', // Replace with your SMTP host
           // port: 465, // Replace with your SMTP port
@@ -70,15 +70,19 @@ export const sendEmail = (
             context: context
           };
           
-          transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-              console.log(error);
-              return error.message
-            } else {
-              console.log('Email sent: ' + info.response);
-              return info.response
-            }
-          });
+          await new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, function(error, info){
+              if (error) {
+                console.log(error);
+                  reject(error)
+                return error.message
+              } else {
+                console.log('Email sent: ' + info.response);
+                  resolve(info)
+                return info.response
+              }
+            });
+          })
     }
 
 
