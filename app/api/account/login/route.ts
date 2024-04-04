@@ -9,6 +9,8 @@ import { IAccount } from "@/config/interfaces";
 //import { IInquiry } from "@/config/interfaces";
 
 ///Commencing the code
+export const dynamic = "force-dynamic"
+
 ///Login in an account
 export async function GET(request) {
     try {
