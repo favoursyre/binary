@@ -22,7 +22,7 @@ const OurHistory = () => {
             <div className={styles.gradientOverlay}></div>
             <Image 
                 className={styles.image}
-                src={"https://drive.google.com/file/d/1QSoiXVXYKXR2EPFOSe57JD-tZX2p2Qcl/view?usp=drive_link"}
+                src={"https://drive.google.com/uc?export=download&id=1QSoiXVXYKXR2EPFOSe57JD-tZX2p2Qcl"}
                 alt=""
                 width={2048}
                 height={1365}

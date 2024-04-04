@@ -145,7 +145,7 @@
                 }
 
                 .title {
-                    @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+                    @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
                     font-family: "Aclonica";
 
                     @include phonePro {

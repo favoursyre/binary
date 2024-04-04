@@ -2,8 +2,7 @@
 
 ///Libraries -->
 import { 
-    sendDividendPaymentEmail,
-    sendIdUnderReviewEmail, sendInvestmentInitEmail, sendInvestmentPaymentEmail, sendReferralBonusEmail, sendWelcomeEmail, sendWithdrawalInitEmail, sendWithdrawalPaymentEmail, 
+    sendDividendPaymentEmail, sendIdUnderReviewEmail, sendInvestmentInitEmail, sendInvestmentPaymentEmail, sendReferralBonusEmail, sendWelcomeEmail, sendWithdrawalInitEmail, sendWithdrawalPaymentEmail, 
 } from "@/config/email";
 import connectMongoDB from "@/config/mongodb";
 import { Account } from "@/models/account";

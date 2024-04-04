@@ -21,7 +21,7 @@ const Stat = () => {
         <div className={styles.investment}>
             <div className={styles.icon}><PaidIcon className={styles.iconTag} /></div>
             <div className={styles.brief}>
-                <span className={styles.brief1}>$60B+</span>
+                <span className={styles.brief1}>$70B+</span>
                 <span className={styles.brief2}>Mutual Funds Size</span>
             </div>
         </div>

@@ -3,6 +3,7 @@
 ///Libraries -->
 import { IFAQs, IIDentification, IMileStone, IDividend, ILeader, IWhatWeDo, IEndeavor, IPrinciple, ITestimonial, IAboutUsLink, ICrypto, IInvestor } from "@/config/interfaces";
 import { companyName, yearCreated, minInvestAmount, annualPercentage, lockInPeriod, formatCryptos } from "@/config/utils";
+//import usdc from "@/public/images/usdc.png"
 
 //Commencing code
 export const countryList: Array<string> = [
@@ -288,14 +289,14 @@ export const cryptos: Array<ICrypto> = [
     },
     {
         image: {
-            src: "https://drive.google.com/uc?export=download&id=1NAerk1XsZXAa6C-EZn-6kqN3xeg1-ap5",
-            width: 2000,
-            height: 2000
+            src: "https://drive.google.com/uc?export=download&id=1kOB9CNeQOcVCPsrHF4aBH8sIe8AtA8bR",
+            width: 8834,
+            height: 2293
         },
         // image: {
-        //     src: usd.src,
-        //     width: usd.width,
-        //     height: usd.height
+        //     src: usdc.src,
+        //     width: usdc.width,
+        //     height: usdc.height
         // },
         name: "USD Coin (ERC20)",
         symbol: "USDC",
@@ -522,13 +523,13 @@ export const dividends: Array<IDividend> = [
     {
         year: 2024,
         recordDate: [
-            "28-01-2024", "28-02-2024"
+            "28-01-2024", "28-02-2024", "28-03-2024"
         ],
         payDate: [
-            "03-02-2024", "03-03-2024"
+            "03-02-2024", "03-03-2024", "03-04-2024"
         ],
         totalMutualFunds: [
-            69800571378, 70015422720
+            69800571378, 70015422720, 70463829062
         ]
     }
 ]

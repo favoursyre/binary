@@ -204,7 +204,7 @@
             }
 
             .heading {
-                @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+                @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
                 //border: 1px solid green;
                 //left: 5%;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
@@ -220,10 +220,6 @@
 
                 @include phoneMini {
                     font-size: 11px;
-                }
-
-                .year {
-                    color: $primary-color;
                 }
             }
 

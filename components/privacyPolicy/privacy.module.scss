@@ -173,7 +173,7 @@
             @include size(100%, 5%);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
             font-family: "Aclonica";
-            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
 
             @include phonePro {
                 font-size: 14px;
@@ -235,7 +235,7 @@
             @include size(100%, 5%);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
             font-family: "Aclonica";
-            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
 
             @include phonePro {
                 font-size: 14px;
@@ -297,7 +297,7 @@
             @include size(100%, 5%);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
             font-family: "Aclonica";
-            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
 
             @include phonePro {
                 font-size: 14px;
@@ -359,7 +359,7 @@
             @include size(100%, 5%);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
             font-family: "Aclonica";
-            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
 
             @include phonePro {
                 font-size: 14px;
@@ -421,7 +421,7 @@
             @include size(100%, 10%);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
             font-family: "Aclonica";
-            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
 
             @include phonePro {
                 font-size: 14px;
@@ -492,7 +492,7 @@
             @include size(100%, 10%);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 1%);
             font-family: "Aclonica";
-            @include text-layout($size: 17px, $l_height: 25px, $color: $text-color-4, $weight: 600);
+            @include text-layout($size: 17px, $l_height: 25px, $color: $primary-color, $weight: 600);
 
             @include phonePro {
                 font-size: 14px;
